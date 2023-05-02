@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .darkMode{
+        @apply dark:border-[#3b3b3b] dark:bg-[#292929] dark:text-[#d9d9d9]
+    }
+}
+
+.ns{font-family: 'ns', sans-serif;}
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+.notosanskr * { 
+    font-family: 'ns', sans-serif;
+}
+.nanum{font-family: 'nanum';}
+@font-face {
+    font-family: 'nanum';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+.scoredream{font-family: 'scoredream';}
+@font-face {
+    font-family: 'scoredream';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.efwm{font-family: 'efwm';}
+@font-face {
+    font-family: 'efwm';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_watermelonSalad.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* 다크 모드 설정 */
+body{
+    background-color: #f7f8f9;
+}
+.dark body{
+    background-color: #333;
+}

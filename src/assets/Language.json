@@ -1,0 +1,12 @@
+[
+    {
+        "Nav" : ["소개", "스킬", "포트폴리오", "연락처"],
+        "MainTxt" : ["안녕하세요...<br>프론트엔드 개발자<br>홍길동 입니다."],
+        "FontTxt" : ["노토산스kr", "나눔스퀘어네오","에스코어드임","수박화채"]
+    },
+    {
+        "Nav" : ["About", "Skills", "Portfolio", "Contact"],
+        "MainTxt" : ["Hi...My name is Honggildong,<br>and I'm Front-end Developer!"],
+        "FontTxt" : ["notosanskr", "NanumSquareNeo","S-CoreDream","watermelonSalad"]
+    }
+]
