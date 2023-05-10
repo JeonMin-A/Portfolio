@@ -1,6 +1,8 @@
 <!-- 부모컴포넌트 -->
 <template>
+    <MainTitle/>
     <NotFound/>
+    
     <FontBox :langList="langList[lang]" />
     <!-- 각 메뉴를 클릭 했을 때 고유의 값이 필요해서 작성 -->
     <!-- <NavMenu @click="DarkMode()" /> -->
@@ -46,6 +48,7 @@
 
 <script>
 import Home from './pages/Home.vue'
+import MainTitle from './pages/MainTitle.vue'
 import About from './pages/Profile.vue'
 import Skill from './pages/Skill.vue'
 import Portfolio from './pages/Portfolio.vue'
@@ -77,6 +80,7 @@ export default {
         Portfolio,
         Contact,
         LoadingSpinner,
+        MainTitle
     },
     data() {
         return {
