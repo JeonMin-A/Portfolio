@@ -1,6 +1,6 @@
 <!-- 부모컴포넌트 -->
 <template>
-    <MainTitle/>
+    <Intro/>
     <NotFound/>
     
     <FontBox :langList="langList[lang]" />
@@ -24,15 +24,15 @@
             <About/>
         </div>
         <div ref="section-2">
-            <Skill/>
-        </div>
-        <div ref="section-3">
             <Portfolio/>
         </div>
-        <div ref="section-4">
-            <Contact/>
+        <div ref="section-3">
+            <Skill/>
         </div>
-        <LoadingSpinner v-if="isLoading"></LoadingSpinner>
+        <!-- <div ref="section-4">
+            <Contact/>
+        </div> -->
+        <!-- <LoadingSpinner v-if="isLoading"></LoadingSpinner> -->
     <!-- 
         푸터 영역
         아래 하단부에 들어갈 거라 탬플릿 안, 제일 하단에 푸터를 라우터 시켜야됌
@@ -48,17 +48,17 @@
 
 <script>
 import Home from './pages/Home.vue'
-import MainTitle from './pages/MainTitle.vue'
+import Intro from './pages/Intro.vue'
 import About from './pages/Profile.vue'
 import Skill from './pages/Skill.vue'
 import Portfolio from './pages/Portfolio.vue'
-import Contact from './pages/Contact.vue'
+// import Contact from './pages/Contact.vue'
 
 // 프롭스할 컴포너를 임포트 
 import NavMenu from './components/Nav.vue'
 import Footer from './components/Footer.vue'
 import FontBox from './components/FontBox.vue'
-import LoadingSpinner from '@/components/LoadingSpinner.vue';
+// import LoadingSpinner from '@/components/LoadingSpinner.vue';
 import Language from './assets/Language.json'
 
 
@@ -78,9 +78,9 @@ export default {
         About,
         Skill,
         Portfolio,
-        Contact,
-        LoadingSpinner,
-        MainTitle
+        // Contact,
+        // LoadingSpinner,
+        Intro
     },
     data() {
         return {

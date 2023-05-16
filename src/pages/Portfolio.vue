@@ -31,7 +31,8 @@
                 <div class="basis-[48%] relative mokup-img group-even:order-1 xl:group-even:order-2">
                     <div v-for="e in 3" :key="e">
                         <!-- 이미지 바인딩 시 백틱 사용 -->
-                        <img class="w-full" :src="require(`@/assets/505-images/mokup-${e}.png`)" alt="mokup">
+                        <!-- <img class="w-full" :src="require(`@/assets/mockup/mokup-${e}.png`)" alt="mokup"> -->
+                        <img class="w-full" :src="require(`@/assets/mokup/mokup-${e}.png`)" alt="mokup">
                     </div>
                 </div>
                 <div class="basis-full md:basis-[52%] pt-10 group-even:order-2 xl:group-even:order-1">
@@ -203,15 +204,15 @@ export default {
     /* 데스크 */
     .mokup-img > div{ position: absolute; overflow: hidden; bottom: 0;}
     .mokup-img > div:nth-child(1){ width: 85%; left: 50%; transform: translateX(-50%);}
-    .mokup-img > div:nth-child(1)::after{ content: ""; position: absolute; width: 92%; height: 62%; background: url("../assets/505-images/preview.jpg") center top no-repeat; left: 19px; top: 22px; background-size: cover; transition: 5s;}
+    .mokup-img > div:nth-child(1)::after{ content: ""; position: absolute; width: 92%; height: 62%; background: url("../assets/mokup/preview.jpg") center top no-repeat; left: 19px; top: 22px; background-size: cover; transition: 5s;}
 
     /* 태블릿 */
     .mokup-img > div:nth-child(2){ width: 35%; right: 0;}
-    .mokup-img > div:nth-child(2)::after{content: ""; position: absolute; width: 86%; height: 81%; background: url("../assets/505-images/preview.jpg") center top no-repeat; left: 16px; top: 29px; background-size: cover; transition: 5s;}
+    .mokup-img > div:nth-child(2)::after{content: ""; position: absolute; width: 86%; height: 81%; background: url("../assets/mokup/preview.jpg") center top no-repeat; left: 16px; top: 29px; background-size: cover; transition: 5s;}
 
     /* 모바일 */
     .mokup-img > div:nth-child(3){ width: 23%; left: 0;}
-    .mokup-img > div:nth-child(3)::after{content: ""; position: absolute; width: 91%; height: 93%; background: url("../assets/505-images/preview.jpg") center top no-repeat; left: 7px; top: 12px; background-size: cover; transition: 5s; border-radius: 5px;}
+    .mokup-img > div:nth-child(3)::after{content: ""; position: absolute; width: 91%; height: 93%; background: url("../assets/mokup/preview.jpg") center top no-repeat; left: 7px; top: 12px; background-size: cover; transition: 5s; border-radius: 5px;}
     .mokup-img > div:hover::after{background-position: center bottom;}
 
 

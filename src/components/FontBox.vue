@@ -1,5 +1,5 @@
 <template>
-    <div class="fixed left-0 top-2/4 -translate-y-2/4 z-50">
+    <div class="sticky left-0 top-2/4 -translate-y-2/4 z-50">
         <div class="bg-white darkMode p-3 text-center absolute cursor-pointer mt-7 transition-all duration-500 left-0 border-2" :class="isOpen && 'left-36'">
             <!-- 아이콘 -->
             <font-awesome-icon icon="font" @click="isOpen === false ? isOpen = true : isOpen=false" /> 

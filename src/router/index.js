@@ -25,12 +25,12 @@ const routes =[
         name: "PortfolioPage",
         component: ()=> import('@/pages/Portfolio')
     },
-    {
-        // 연락처
-        path: "/Contact",
-        name: "ContactPage",
-        component: ()=> import('@/pages/Contact')
-    },
+    // {
+    //     // 연락처
+    //     path: "/Contact",
+    //     name: "ContactPage",
+    //     component: ()=> import('@/pages/Contact')
+    // },
     {
         // 404
         path: "/:pathMatch(.*)*",

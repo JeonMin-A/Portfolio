@@ -3,15 +3,15 @@
         <!-- 
             타이틀 영역
         -->
-        <Title title="연락" />
+        <!-- <Title title="연락" /> -->
     </div>
 </template>
 <script>
-import Title from '../components/Title.vue'
+// import Title from '../components/Title.vue'
 export default {
     name: "ContactPage",
     components:{
-        Title
+        // Title
     },
 }
 </script>

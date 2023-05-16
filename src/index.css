@@ -39,8 +39,30 @@
 
 /* 다크 모드 설정 */
 body{
-    background-color: #f7f8f9;
+    /* background-color: #e0efff; */
+    background: linear-gradient(-45deg, #fddee9, #90e1ff, #d3c4ff, #c9fbef);
+    /* background: linear-gradient(-45deg, #b3b3b3, #e7e7e7, #d4d4d4, #ffffff); */
+    /* background: linear-gradient(-45deg, #d5c7ff, #dbfff6, #d6f1fa, #fddee9); */
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100%;
 }
 .dark body{
-    background-color: #333;
+    /* background-color: #333; */
+    background: linear-gradient(-45deg, #1b1724, #451f2a, #022733, #033a2c);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100%;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
