@@ -1,9 +1,6 @@
 <template>
     <div class="w-full h-full">
-        <div class="max-w-7xl mx-auto pt-40 pb-24 text-center">
-            <h1 class="text-[100px]">Portfolio</h1>
-            <h5 class="text-4xl">Jeon Min-A</h5>
-        </div>
+
     </div>
 </template>
 

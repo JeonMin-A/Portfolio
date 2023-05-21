@@ -1,45 +1,26 @@
 <template>
+    <!-- 가로스크롤 수정 -->
+    <div class=""></div>
     <div class="w-full pt-12 mt-16 px-[2%] pb-8">
-        <!-- 
-            타이틀 영역
-        -->
         <Title title="포트폴리오" />
-        <!-- 
-            카테고리 영역
-        -->
         <div class="max-w-7xl mx-auto mt-8">
             <ul class="flex m-4">
-                <!-- 이거 실무에서 많이 사용함, 따로 메모 해놓기 -->
                 <li class="mr-4 border darkMode bg-white py-2 px-5 rounded-md">
                     <button @click="CateName = '전체'" :class="CateName === '전체' && 'font-bold text-blue-300'">전체</button>
                 </li>
-                <!--
-                    :class="CateName === e.type && 'font-bold text-blue-800'"
-                    :클래스 앞에 바인딩이 있어야 조건이 작동/ ?=참, := 거짓 / 삼항연산자에서 &&면 무조건 참, 거짓은 없음 / 굳이  else까지 적어줄 필요가 없기에 줄인거임
-                    :class="CateName === e.type ? 'font-bold text-blue-800' : ''"
-                -->
                 <li class="mr-4 border darkMode bg-white py-2 px-5 rounded-md" v-for="e in CateList" :key="e">
                     <button @click="CateName = e.type" :class="CateName === e.type && 'font-bold text-blue-800'">{{ e.type }}</button>
                 </li>
             </ul>
         </div>
-        <!-- 
-            본문 영역
-        -->
         <div class="max-w-7xl mx-auto mt-8">
             <div v-for="e in CateItem" :key="e" class="bg-white mb-8 pt-12 group px-8 pb-16 rounded-md flex border darkMode flex-wrap">
                 <div class="basis-[48%] relative mokup-img group-even:order-1 xl:group-even:order-2">
                     <div v-for="e in 3" :key="e">
-                        <!-- 이미지 바인딩 시 백틱 사용 -->
-                        <!-- <img class="w-full" :src="require(`@/assets/mockup/mokup-${e}.png`)" alt="mokup"> -->
                         <img class="w-full" :src="require(`@/assets/mokup/mokup-${e}.png`)" alt="mokup">
                     </div>
                 </div>
                 <div class="basis-full md:basis-[52%] pt-10 group-even:order-2 xl:group-even:order-1">
-                    <!-- 
-                        even = 짝수
-                        odd = 홀수
-                    -->
                     <h3 class="text-2xl font-bold pt-[10px] pb-[10px] lg:pl-[50px]">
                         {{ e.descTitle }}
                     </h3>
@@ -52,11 +33,6 @@
                     <p class="text-base pt-[10px] pb-[10px] lg:pl-[50px]">기여도 : {{ e.contribution }}</p>
                     <ul class="flex justify-center mt-6">
                         <li v-if="e.progress"><a :href="e.progress" class="py-1 px-8 border rounded-md darkMode text-sm">Progress</a></li>
-                        <!-- 
-                            v-if="e.progress"
-                            v-if="e.progress !== ''"
-                            :class="e.progress === '' && 'hidden'" 
-                        -->
                         <li v-if="e.original"><a :href="e.original" :class="e.original === '' && 'hidden'" class="py-1 px-8 border rounded-md darkMode text-sm mx-4" target="_blank">Original</a></li>
                         <li v-if="e.redesign"><a :href="e.redesign" :class="e.redesign === '' && 'hidden'" class="py-1 px-8 border rounded-md darkMode text-sm" target="_blank">{{ e.type === 'Publishing' ? 'Clone' : 'Redesign' }}</a></li>
                     </ul>
@@ -139,13 +115,11 @@ export default {
                     "color" : ["lightgray", "white", "black"],
                     "font": "Noto Sans KR",
                     "tools" : ["PS", "배고프당", "VS CODE"],
-                    "date" : "30일 (기획 10일 / 구상10일 / 제작10일)",
+                    "date" : "30일 (기획 10일 / 구상10일)",
                     "contribution" : "100%",
                     "type" : "Publishing",
                     "progress" : "https//via.placeholder.com/1200x5000",
                     "original" : "https//www.naver.com",
-                    "redesign" : "https//www.kakao.com",
-
                 },
                 {
                     "img" : "https//via.placeholder.com/500",
@@ -155,12 +129,11 @@ export default {
                     "color" : ["lightblue", "white", "orange"],
                     "font": "Noto Sans KR",
                     "tools" : ["PS", "배고프당", "VS CODE"],
-                    "date" : "30일 (기획 10일 / 구상10일 / 제작10일)",
+                    "date" : "30일 (기획 10일 / 구상10일",
                     "contribution" : "100%",
                     "type" : "Publishing",
                     "progress" : "https//via.placeholder.com/1200x5000",
                     "original" : "https//www.naver.com",
-                    "redesign" : "https//www.kakao.com",
 
                 },
                 {
@@ -171,12 +144,11 @@ export default {
                     "color" : ["lightgray", "white", "black"],
                     "font": "Noto Sans KR",
                     "tools" : ["PS", "배고프당", "VS CODE"],
-                    "date" : "30일 (기획 10일 / 구상10일 / 제작10일)",
+                    "date" : "30일 (기획 10일 / 구상10일",
                     "contribution" : "100%",
                     "type" : "Publishing",
                     "progress" : "https//via.placeholder.com/1200x5000",
                     "original" : "https//www.naver.com",
-                    "redesign" : "https//www.kakao.com",
 
                 },
                 {
@@ -187,13 +159,11 @@ export default {
                     "color" : ["lightgray", "white", "black"],
                     "font": "Noto Sans KR",
                     "tools" : ["PS", "배고프당", "VS CODE"],
-                    "date" : "30일 (기획 10일 / 구상10일 / 제작10일)",
+                    "date" : "30일 (기획 10일 / 구상10일",
                     "contribution" : "100%",
                     "type" : "Publishing",
                     "progress" : "https//via.placeholder.com/1200x5000",
                     "original" : "https//www.naver.com",
-                    "redesign" : "https//www.kakao.com",
-
                 },
             ]
         }

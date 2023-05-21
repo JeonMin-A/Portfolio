@@ -3,7 +3,7 @@
     <Intro/>
     <NotFound/>
     
-    <FontBox :langList="langList[lang]" />
+    <!-- <FontBox :langList="langList[lang]" /> -->
     <!-- 각 메뉴를 클릭 했을 때 고유의 값이 필요해서 작성 -->
     <!-- <NavMenu @click="DarkMode()" /> -->
     
@@ -44,6 +44,7 @@
             <button @click="scrollToTop" class="pt-[10px] pb-[10px] pl-[17px] pr-[17px] opacity-75"><font-awesome-icon class="text-white dark:text-[#333]" icon="fa-solid fa-arrow-up" size="1x" /></button>
         </div>
     </transition>
+    
 </template>
 
 <script>
@@ -57,7 +58,7 @@ import Portfolio from './pages/Portfolio.vue'
 // 프롭스할 컴포너를 임포트 
 import NavMenu from './components/Nav.vue'
 import Footer from './components/Footer.vue'
-import FontBox from './components/FontBox.vue'
+// import FontBox from './components/FontBox.vue'
 // import LoadingSpinner from '@/components/LoadingSpinner.vue';
 import Language from './assets/Language.json'
 
@@ -73,7 +74,7 @@ export default {
         // 3. 컴포넌츠에 설정한 작성, component 아니고 component's'임, 오타 주의
         NavMenu,
         Footer,
-        FontBox,
+        // FontBox,
         Home,
         About,
         Skill,
@@ -161,4 +162,5 @@ export default {
     /* 스크롤 내리거나 올릴 때 둘다 부드럽게 해주는 것 */
     opacity: 0;
 }
+
 </style>
