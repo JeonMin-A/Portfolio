@@ -59,9 +59,6 @@ body{
     animation: gradient-bg 20s ease infinite;
 }
 
-.gradient {
-}
-
 
 @keyframes gradient-bg {
 	0% {
