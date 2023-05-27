@@ -4,7 +4,7 @@ const routes =[
     {
         // MainHome
         path: "/",
-        name: "MainHome",
+        name: "HomePage",
         component: ()=> import('@/pages/Home')
     },
     {
@@ -14,16 +14,16 @@ const routes =[
         component: ()=> import('@/pages/About')
     },
     {
-        // Contact
-        path: "/contact",
-        name: "ContactPage",
-        component: ()=> import('@/pages/Contact')
-    },
-    {
         // Portfolio
         path: "/portfolio",
         name: "PortfolioPage",
         component: ()=> import('@/pages/Portfolio')
+    },
+    {
+        // Contact
+        path: "/contact",
+        name: "ContactPage",
+        component: ()=> import('@/pages/Contact')
     },
     {
         // 404

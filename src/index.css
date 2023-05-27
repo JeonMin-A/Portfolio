@@ -37,11 +37,14 @@
 } */
 
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&family=Roboto:wght@100&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&family=Roboto:wght@100&display=swap'); */
 
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 *{
+    font-family: 'Noto Sans KR', sans-serif;
     /* font-family: 'Roboto', sans-serif; */
+    /* font-weight: 700; */
 }
 
 

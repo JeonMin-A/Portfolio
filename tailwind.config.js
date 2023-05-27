@@ -8,7 +8,7 @@ module.exports = {
           
         },
         animation: {
-          'spin-slow': 'spin 4s linear infinite',
+          'spin-slow': 'spin 10s linear infinite',
         },
       },
   },

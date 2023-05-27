@@ -1,6 +1,10 @@
 <template>
-    <ul class="sticky top-5 ml-5 z-20">
-        <li class="relative text-[20px] dark:text-[#d9d9d9]  mt-4" v-for="(e, index) in NavList[0]" :key="e">
+    <div class="">
+        <img :src="require(`@/assets/images/logo_text.svg`)" alt="로고" class="animate-spin-slow fixed top-0 right-0 z-20 w-[200px]">
+        <img :src="require(`@/assets/images/Globe.svg`)" alt="로고" class="fixed right-[50px] top-[50px] z-20 w-[100px]">
+    </div>
+    <ul class="sticky top-10 z-20">
+        <li class="ml-10 text-[20px] dark:text-[#d9d9d9]  mt-4" v-for="(e, index) in NavList[0]" :key="e">
             <button @click="$emit('MenuIndex', 'section-'+(index+1) )" class="text-3xl">{{ e }}</button>
         </li>
     </ul>
@@ -57,7 +61,7 @@ export default {
             isOpen: false,
             // 6.위에서 nav 반복문 돌려줄거라 데이터 안에 변수 작성, [[ex1],[ex2]] 대괄호 안, ex2는 라우터 시킬 path(주소)임.
             // 프롭스 작동을 할려며 부모 컴포넌트에서 가져온 변수를 프롭스 작성해준다.
-            NavList: [["About", "Portfolio", "Contact"], ["/About", "/portfolio", "/Contact"], ["user", "code", "folder-open"]]
+            NavList: [["Home", "About", "Portfolio", "Contact"], ["Home", "/About", "/Portfolio", "/Contact"], ["user", "code", "folder-open"]]
         }
     },
 }

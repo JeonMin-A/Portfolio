@@ -1,10 +1,10 @@
 [
     {
-        "Nav" : ["About", "Portfolio", "Contact"],
+        "Nav" : ["Home", "About", "Portfolio", "Contact"],
         "FontTxt" : ["노토산스kr", "나눔스퀘어네오","에스코어드임","수박화채"]
     },
     {
-        "Nav" : ["About", "Portfolio", "Contact"],
+        "Nav" : ["Home", "About", "Portfolio", "Contact"],
         "FontTxt" : ["notosanskr", "NanumSquareNeo","S-CoreDream","watermelonSalad"]
     }
 ]

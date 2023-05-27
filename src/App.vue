@@ -2,17 +2,17 @@
 <template>
         <Intro/>
     <!-- <NotFound/> -->
-        <div ref="section-0">
+    <NavMenu @MenuIndex="SectionMove($event)"/>
+        <div ref="section-1">
             <Home />
         </div>
-        <NavMenu @MenuIndex="SectionMove($event)"/>
-        <div ref="section-1">
+        <div ref="section-2">
             <About/>
         </div>
-        <div ref="section-2">
+        <div ref="section-3">
             <Portfolio/>
         </div>
-        <div ref="section-3">
+        <div ref="section-4">
             <Contact/>
         </div>
         <SideWidget @dark="toggleDark()" :isDark="isDark"  />
@@ -20,13 +20,11 @@
 </template>
 
 <script>
-import Home from './pages/Home.vue'
 import Intro from './pages/Intro.vue'
+import Home from './pages/Home.vue'
 import About from './pages/About.vue'
-
-import Contact from './pages/Contact.vue'
 import Portfolio from './pages/Portfolio.vue'
-// import Contact from './pages/Contact.vue'
+import Contact from './pages/Contact.vue'
 
 // 프롭스할 컴포너를 임포트 
 import NavMenu from './components/Nav.vue'
@@ -45,13 +43,13 @@ export default {
     name: 'App',
     components: {
         NavMenu,
-        Footer,
+        Intro,
         Home,
         About,
-        Contact,
         Portfolio,
-        Intro,
-        SideWidget
+        Contact,
+        SideWidget,
+        Footer,
     },
     data() {
         return {

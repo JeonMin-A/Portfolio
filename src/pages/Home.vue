@@ -31,16 +31,5 @@ export default {
 </script>
 
 <style>
-    .icon_animation{
-        animation: up-down 1.4s infinite ease-in-out alternate;
-    }
 
-    @keyframes up-down{
-        from{
-            transform: translatey(0px);
-        }
-        to{
-            transform: translatey(-20px);
-        }
-    }  
 </style>
