@@ -1,11 +1,17 @@
 <template>
-    <div class="">
-        <img :src="require(`@/assets/images/logo_text.svg`)" alt="로고" class="animate-spin-slow fixed top-0 right-0 z-20 w-[200px]">
-        <img :src="require(`@/assets/images/Globe.svg`)" alt="로고" class="fixed right-[50px] top-[50px] z-20 w-[100px]">
+    <!-- 
+        logo area
+    -->
+    <div class="hidden xl:block">
+        <img :src="require(`@/assets/images/logo_text.svg`)" alt="로고" class="animate-spin-slow fixed top-0 right-0 z-20 w-[200px] block dark:hidden">
+        <img :src="require(`@/assets/images/logo_text_white.svg`)" alt="로고" class="animate-spin-slow fixed top-0 right-0 z-20 w-[200px] hidden dark:block">
+        <img :src="require(`@/assets/images/3.svg`)" alt="로고" class="fixed right-[50px] top-[50px] z-20 w-[100px] block dark:hidden">
+        <img :src="require(`@/assets/images/4.svg`)" alt="로고" class="fixed right-[50px] top-[50px] z-20 w-[100px] hidden dark:block">
     </div>
+    <!-- nav area -->
     <ul class="sticky top-10 z-20">
         <li class="ml-10 text-[20px] dark:text-[#d9d9d9]  mt-4" v-for="(e, index) in NavList[0]" :key="e">
-            <button @click="$emit('MenuIndex', 'section-'+(index+1) )" class="text-3xl">{{ e }}</button>
+            <button @click="$emit('MenuIndex', 'section-'+(index+1) )" class="text-3xl hover:opacity-60">{{ e }}</button>
         </li>
     </ul>
 
@@ -19,15 +25,22 @@
                 </ul>
             </div> -->
             <!-- 
-                모바일 햄버거 
+                mobile 
             -->
-            <div class="manu_bar">
-                <font-awesome-icon icon="bars" class="text-3xl cursor-pointer md:hidden absolute right-3 top-5" @click="isOpen = true"  />
-            </div>
+            <nav class="h-12 bg-[#d9d9d9]">
+                <div class="logo_mobile text-center">
+                    <img :src="require(`@/assets/images/logo_text.svg`)" alt="로고" class="animate-spin-slow block dark:hidden w-14">
+                    <img :src="require(`@/assets/images/logo_text_white.svg`)" alt="로고" class="animate-spin-slow hidden dark:block w-14">
+                    <img :src="require(`@/assets/images/3.svg`)" alt="로고" class="block dark:hidden w-12">
+                    <img :src="require(`@/assets/images/4.svg`)" alt="로고" class="hidden dark:block w-12">
+                </div>
+                <div class="manu_bar">
+                    <font-awesome-icon icon="bars" class="text-3xl cursor-pointer md:hidden absolute right-3 top-5 dark:text-[#d9d9d9]" @click="isOpen = true"  />
+                </div>
+            </nav>
             <div class="w-72 h-full fixed darkMode bg-gray-100 z-50 p-12 box-border transition-all duration-500 top-0 -right-80 md:hidden" :class="isOpen && '!right-0'">
                 <font-awesome-icon icon="times" class="absolute top-5 right-5 text-3xl cursor-pointer md:hidden" @click="isOpen === false ? isOpen = true : isOpen=false" />
                 <div class="text-center mt-6">
-                    <img src="https://via.placeholder.com/100" alt="img" class="mx-auto rounded-full mb-4">
                     <p>프론트엔드 개발자 전민아</p>
                 </div>
                 <ul class="mt-12">
@@ -36,11 +49,11 @@
                         <button @click="$emit('MenuIndex', 'section-'+(index+1) )">{{ e }}</button>
                     </li>
                 </ul>
-                <ul class=" bottom-3 right-3 flex flex-wrap">
+                <!-- <ul class=" bottom-3 right-3 flex flex-wrap">
                     <li>
                         <font-awesome-icon icon="globe" class="text-2xl" />
                     </li>
-                </ul>
+                </ul> -->
                 <ul class="bottom-3 right-64">
                     <li>
                         <a href="https://github.com/JeonMina-A"><font-awesome-icon icon="fa-brands fa-github" class="text-2xl" /></a>
@@ -68,5 +81,9 @@ export default {
 </script>
 
 <style>
-
+    .swiper-pagination .swiper-pagination-progressbar .swiper-pagination-horizontal.swiper-pagination-progressbar-fill:root{
+        /* --swiper-theme-color: #007aff; */
+        --swiper-theme-color: #000000;
+        /* background: #000; */
+    }
 </style>

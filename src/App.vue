@@ -58,7 +58,7 @@ export default {
             langList : Language,
             toggleDark: useToggle(useDark()),
             FontStyle: "",
-            MenuIndex: 'section-1',
+            MenuIndex: 'section-0',
             ArrayList: '',
             scTimer: 0,
             scY: 0,

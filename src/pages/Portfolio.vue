@@ -1,8 +1,8 @@
 <template>
     <div class="w-full pt-12 mt-16 px-[2%] pb-8">
+        <!-- 카테고리 -->
         <div class="max-w-7xl mx-auto mt-8">
             <ul class="flex m-4">
-                <!-- 카테고리 -->
                 <li class="mr-4 border darkMode bg-white py-2 px-5 rounded-md">
                     <button @click="CateName = '전체'" :class="CateName === '전체' && 'font-bold text-blue-300'">전체</button>
                 </li>
@@ -11,8 +11,14 @@
                 </li>
             </ul>
         </div>
+        <div class=""></div>
+        <!-- 
+            contents 
+        -->
         <div class="max-w-7xl mx-auto mt-8">
-            <div v-for="e in CateItem" :key="e" class="bg-white mb-8 pt-12 group px-8 pb-16 rounded-md flex border darkMode flex-wrap">
+            <swiper :pagination="{type: 'progressbar',}" :navigation="true" :modules="modules" :keyboard="true" :cssMode="true" class="mySwiper">
+                <swiper-slide v-for="e in CateItem" :key="e">
+                    <div class="bg-white mb-8 pt-12 group px-8 pb-16 rounded-md flex border darkMode flex-wrap">
                 <div class="basis-[48%] relative mokup-img group-even:order-1 xl:group-even:order-2">
                     <!-- <div v-for="e in 3" :key="e">
                         <img class="w-full" :src="require(`@/assets/mokup/mokup-${e}.png`)" alt="mokup">
@@ -36,15 +42,17 @@
                     </ul>
                 </div>
             </div>
+                </swiper-slide>
+            </swiper>
         </div>
     </div>
 </template>
 <script>
 // import Title from '../components/Title.vue'
-// import Portfolio from '../assets/Portfolio.json'
+// import PortfolioData from '../assets/Portfolio.json'
 
-// import { Swiper, SwiperSlide } from 'swiper/vue';
-import { EffectFade, Pagination, Autoplay, Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { EffectFade, Pagination, Autoplay, Navigation, Keyboard } from 'swiper';
 import 'swiper/css'
 import 'swiper/css/bundle';
 import 'swiper/css/pagination';
@@ -56,8 +64,8 @@ export default {
     data() {
         return {
             CateName: "전체",
-            Modules: [EffectFade, Pagination, Autoplay, Navigation],
-            // Portfolio : Portfolio,
+            modules: [EffectFade, Pagination, Autoplay, Navigation, Keyboard],
+            // Portfolio : PortfolioData,
             WorkList: [
                 {
                     "img" : "https//via.placeholder.com/500",
@@ -153,9 +161,8 @@ export default {
         }
     },
     components:{
-        // Swiper,
-        // SwiperSlide
-        // Title
+        Swiper,
+        SwiperSlide
     },
     computed:{
         CateItem(){
@@ -180,72 +187,32 @@ export default {
 }
 </script>
 <style>
-    /* 데스크 */
-    /* .mokup-img > div{ position: absolute; overflow: hidden; bottom: 0;}
-    .mokup-img > div:nth-child(1){ width: 85%; left: 50%; transform: translateX(-50%);}
-    .mokup-img > div:nth-child(1)::after{ content: ""; position: absolute; width: 92%; height: 62%; background: url("../assets/mokup/preview.jpg") center top no-repeat; left: 19px; top: 22px; background-size: cover; transition: 5s;} */
-
-    /* 태블릿 */
-    /* .mokup-img > div:nth-child(2){ width: 35%; right: 0;}
-    .mokup-img > div:nth-child(2)::after{content: ""; position: absolute; width: 86%; height: 81%; background: url("../assets/mokup/preview.jpg") center top no-repeat; left: 16px; top: 29px; background-size: cover; transition: 5s;} */
-
-    /* 모바일 */
-    /* .mokup-img > div:nth-child(3){ width: 23%; left: 0;}
-    .mokup-img > div:nth-child(3)::after{content: ""; position: absolute; width: 91%; height: 93%; background: url("../assets/mokup/preview.jpg") center top no-repeat; left: 7px; top: 12px; background-size: cover; transition: 5s; border-radius: 5px;}
-    .mokup-img > div:hover::after{background-position: center bottom;} */
-
-
-    /* 반응형 */
-    /* @media screen and (max-width: 1200px) {
-        .mokup-img{flex-basis: 100%; height: 500px;}
-        .mokup-img > div:nth-child(1){width: 550px;}
-        .mokup-img > div:nth-child(2){width: 184px; right: 0;}
-        .mokup-img > div:nth-child(3){width: 126px; left: 0;}
-        .mokup-img > div:nth-child(1)::after{top: 23px;  height: 62%; left: 21px; width: 87%;}
-        .mokup-img > div:nth-child(2)::after{width: 85%; top: 24px;}
+    .swiper-button-prev{
+        /* border: 1px solid black; */
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
     }
-    @media screen and (max-width: 640px) {
-        .mokup-img{height: 70.3125vw;}
-        .mokup-img > div:nth-child(1){width: 100%;}
-        .mokup-img > div:nth-child(2){width: 35%;}
-        .mokup-img > div:nth-child(3){width: 20%;}
-        .mokup-img > div:nth-child(1)::after{width: 92.5%; left: 3.8%; top: 4.7%;}
-        .mokup-img > div:nth-child(2)::after{left: 8%; top: 8%;}
-        .mokup-img > div:nth-child(3)::after{height: 92.5%; left: 5.5%; top:2.5;}
-    } */
-    @keyframes marquee{
-        from{
-    transform: translateX(0);
+    .swiper-button-prev::after{
+        content: '';
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='%23000' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd'%3E%3Cpath d='M20 .755l-14.374 11.245 14.374 11.219-.619.781-15.381-12 15.391-12 .609.755z'/%3E%3C/svg%3E");
+        background-size: cover;
+        width: 25px;
+        height: 25px;
+        left: 14px;
     }
-    to{
-    transform: translateX(-50%);
+    .swiper-button-next{
+        /* border: 1px solid black; */
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
     }
-}
-
-    .animated-title{
-        font-size: 20px;
-        width: 100%;
-        margin-top: 60px;
-        max-width: 100%;
-        border: 1px solid black;
-        overflow: hidden;
-    }
-
-    .animated-title .track{
-        white-space: nowrap;
-        will-change: transform;
-        animation: marquee 30s linear infinite;
-    }
-
-    .animated-title .track .content{
-        padding: 30px;
-        font-weight: 600;
-    }
-
-    .animated-title .track .content img{
-        width: 17px;
-        height: 17px;
-        margin-right: 20px;
-        margin-left: 20px;
+    .swiper-button-next::after{
+        content: '';
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='%23000' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd'%3E%3Cpath d='M4 .755l14.374 11.245-14.374 11.219.619.781 15.381-12-15.391-12-.609.755z'/%3E%3C/svg%3E");
+        background-size: cover;
+        width: 25px;
+        height: 25px;
+        right: 20px;
     }
 </style>
