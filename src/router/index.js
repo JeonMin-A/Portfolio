@@ -2,44 +2,38 @@ import { createWebHistory, createRouter } from "vue-router";
 
 const routes =[
     {
-        // 메인 홈
+        // MainHome
         path: "/",
         name: "MainHome",
         component: ()=> import('@/pages/Home')
     },
     {
-        // 프로필
-        path: "/Profile",
-        name: "ProfilePage",
-        component: ()=> import('@/pages/Profile')
+        // About
+        path: "/about",
+        name: "AboutPage",
+        component: ()=> import('@/pages/About')
     },
     {
-        // 스킬
-        path: "/skill",
-        name: "SkillPage",
-        component: ()=> import('@/pages/Skill')
+        // Contact
+        path: "/contact",
+        name: "ContactPage",
+        component: ()=> import('@/pages/Contact')
     },
     {
-        // 포트폴리오
+        // Portfolio
         path: "/portfolio",
         name: "PortfolioPage",
         component: ()=> import('@/pages/Portfolio')
     },
-    // {
-    //     // 연락처
-    //     path: "/Contact",
-    //     name: "ContactPage",
-    //     component: ()=> import('@/pages/Contact')
-    // },
     {
         // 404
-        path: "/:pathMatch(.*)*",
-        redirect: "/404",
+        // path: "/:pathMatch(.*)*",
+        // redirect: "/404",
     },
     {
         // 404 페이지
-        path: "/404",
-        component: ()=> import('@/pages/NotFound')
+        // path: "/404",
+        // component: ()=> import('@/pages/NotFound')
 
     }
 ]

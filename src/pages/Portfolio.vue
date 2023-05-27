@@ -1,10 +1,8 @@
 <template>
-    <!-- 가로스크롤 수정 -->
-    <div class=""></div>
     <div class="w-full pt-12 mt-16 px-[2%] pb-8">
-        <Title title="포트폴리오" />
         <div class="max-w-7xl mx-auto mt-8">
             <ul class="flex m-4">
+                <!-- 카테고리 -->
                 <li class="mr-4 border darkMode bg-white py-2 px-5 rounded-md">
                     <button @click="CateName = '전체'" :class="CateName === '전체' && 'font-bold text-blue-300'">전체</button>
                 </li>
@@ -16,9 +14,9 @@
         <div class="max-w-7xl mx-auto mt-8">
             <div v-for="e in CateItem" :key="e" class="bg-white mb-8 pt-12 group px-8 pb-16 rounded-md flex border darkMode flex-wrap">
                 <div class="basis-[48%] relative mokup-img group-even:order-1 xl:group-even:order-2">
-                    <div v-for="e in 3" :key="e">
+                    <!-- <div v-for="e in 3" :key="e">
                         <img class="w-full" :src="require(`@/assets/mokup/mokup-${e}.png`)" alt="mokup">
-                    </div>
+                    </div> -->
                 </div>
                 <div class="basis-full md:basis-[52%] pt-10 group-even:order-2 xl:group-even:order-1">
                     <h3 class="text-2xl font-bold pt-[10px] pb-[10px] lg:pl-[50px]">
@@ -42,38 +40,24 @@
     </div>
 </template>
 <script>
-import Title from '../components/Title.vue'
+// import Title from '../components/Title.vue'
+// import Portfolio from '../assets/Portfolio.json'
+
+// import { Swiper, SwiperSlide } from 'swiper/vue';
+import { EffectFade, Pagination, Autoplay, Navigation } from 'swiper';
+import 'swiper/css'
+import 'swiper/css/bundle';
+import 'swiper/css/pagination';
+import "swiper/css/effect-fade";
+import 'swiper/css/navigation';
+
 export default {
     name: "PortfolioPage",
-    components:{
-        Title
-    },
-    methods: {
-        
-    },
-    computed:{
-        CateItem(){
-            return this.WorkList.filter((data)=>{
-            if(this.CateName !== '전체'){
-                return data.type === this.CateName
-            }else{
-                return data.type
-            }
-        })
-    },
-    CateList(){
-        return this.WorkList.filter((item,i)=>{
-            return(
-                this.WorkList.findIndex((item2)=>{
-                    return item.type === item2.type
-            }) === i
-        )
-        })
-    },
-    },
     data() {
         return {
             CateName: "전체",
+            Modules: [EffectFade, Pagination, Autoplay, Navigation],
+            // Portfolio : Portfolio,
             WorkList: [
                 {
                     "img" : "https//via.placeholder.com/500",
@@ -85,7 +69,7 @@ export default {
                     "tools" : ["PS", "AI", "VS CODE"],
                     "date" : "10일 (기획 1일 / 구상1일 / 제작8일)",
                     "contribution" : "100%",
-                    "type" : "Publishing",
+                    "type" : ["Publishing", "ToyProject"],
                     "progress" : "https//via.placeholder.com/1200x5000",
                     "original" : "https//www.naver.com",
                     "redesign" : "",
@@ -102,9 +86,9 @@ export default {
                     "date" : "20일 (기획 10일 / 구상5일 / 제작5일)",
                     "contribution" : "100%",
                     "type" : "Wepapp",
-                    "progress" : "https//via.placeholder.com/1200x5000",
-                    "original" : "",
-                    "redesign" : "https//www.kakao.com",
+                    "Site" : "https//via.placeholder.com/1200x5000",
+                    "Notion" : "",
+                    "GitHub" : "https//www.kakao.com",
 
                 },
                 {
@@ -168,26 +152,51 @@ export default {
             ]
         }
     },
+    components:{
+        // Swiper,
+        // SwiperSlide
+        // Title
+    },
+    computed:{
+        CateItem(){
+            return this.WorkList.filter((data)=>{
+            if(this.CateName !== '전체'){
+                return data.type === this.CateName
+            }else{
+                return data.type
+            }
+        })
+    },
+    CateList(){
+        return this.WorkList.filter((item,i)=>{
+            return(
+                this.WorkList.findIndex((item2)=>{
+                    return item.type === item2.type
+            }) === i
+        )
+        })
+    },
+    },
 }
 </script>
 <style>
     /* 데스크 */
-    .mokup-img > div{ position: absolute; overflow: hidden; bottom: 0;}
+    /* .mokup-img > div{ position: absolute; overflow: hidden; bottom: 0;}
     .mokup-img > div:nth-child(1){ width: 85%; left: 50%; transform: translateX(-50%);}
-    .mokup-img > div:nth-child(1)::after{ content: ""; position: absolute; width: 92%; height: 62%; background: url("../assets/mokup/preview.jpg") center top no-repeat; left: 19px; top: 22px; background-size: cover; transition: 5s;}
+    .mokup-img > div:nth-child(1)::after{ content: ""; position: absolute; width: 92%; height: 62%; background: url("../assets/mokup/preview.jpg") center top no-repeat; left: 19px; top: 22px; background-size: cover; transition: 5s;} */
 
     /* 태블릿 */
-    .mokup-img > div:nth-child(2){ width: 35%; right: 0;}
-    .mokup-img > div:nth-child(2)::after{content: ""; position: absolute; width: 86%; height: 81%; background: url("../assets/mokup/preview.jpg") center top no-repeat; left: 16px; top: 29px; background-size: cover; transition: 5s;}
+    /* .mokup-img > div:nth-child(2){ width: 35%; right: 0;}
+    .mokup-img > div:nth-child(2)::after{content: ""; position: absolute; width: 86%; height: 81%; background: url("../assets/mokup/preview.jpg") center top no-repeat; left: 16px; top: 29px; background-size: cover; transition: 5s;} */
 
     /* 모바일 */
-    .mokup-img > div:nth-child(3){ width: 23%; left: 0;}
+    /* .mokup-img > div:nth-child(3){ width: 23%; left: 0;}
     .mokup-img > div:nth-child(3)::after{content: ""; position: absolute; width: 91%; height: 93%; background: url("../assets/mokup/preview.jpg") center top no-repeat; left: 7px; top: 12px; background-size: cover; transition: 5s; border-radius: 5px;}
-    .mokup-img > div:hover::after{background-position: center bottom;}
+    .mokup-img > div:hover::after{background-position: center bottom;} */
 
 
     /* 반응형 */
-    @media screen and (max-width: 1200px) {
+    /* @media screen and (max-width: 1200px) {
         .mokup-img{flex-basis: 100%; height: 500px;}
         .mokup-img > div:nth-child(1){width: 550px;}
         .mokup-img > div:nth-child(2){width: 184px; right: 0;}
@@ -203,5 +212,40 @@ export default {
         .mokup-img > div:nth-child(1)::after{width: 92.5%; left: 3.8%; top: 4.7%;}
         .mokup-img > div:nth-child(2)::after{left: 8%; top: 8%;}
         .mokup-img > div:nth-child(3)::after{height: 92.5%; left: 5.5%; top:2.5;}
+    } */
+    @keyframes marquee{
+        from{
+    transform: translateX(0);
+    }
+    to{
+    transform: translateX(-50%);
+    }
+}
+
+    .animated-title{
+        font-size: 20px;
+        width: 100%;
+        margin-top: 60px;
+        max-width: 100%;
+        border: 1px solid black;
+        overflow: hidden;
+    }
+
+    .animated-title .track{
+        white-space: nowrap;
+        will-change: transform;
+        animation: marquee 30s linear infinite;
+    }
+
+    .animated-title .track .content{
+        padding: 30px;
+        font-weight: 600;
+    }
+
+    .animated-title .track .content img{
+        width: 17px;
+        height: 17px;
+        margin-right: 20px;
+        margin-left: 20px;
     }
 </style>

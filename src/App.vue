@@ -1,25 +1,11 @@
 <!-- 부모컴포넌트 -->
 <template>
-    <Intro/>
-    <NotFound/>
-    
-    <!-- <FontBox :langList="langList[lang]" /> -->
-    <!-- 각 메뉴를 클릭 했을 때 고유의 값이 필요해서 작성 -->
-    <!-- <NavMenu @click="DarkMode()" /> -->
-    
-    <!-- 새로고침해도 유지 쌉가능
-        11.부모 컴포넌트에서 자식 컴포넌트를 호출 시 자식 컴포넌트 태그 내 ‘v-vind’나 ‘:’콜론 키워드를 통해 데이터를 전달, 
-        변수명은 사용했던 변수명 그대로 작성해야 됌
-        @dark="toggleDark() - 클릭 하였을 때 사용 -->
-        <!-- 이벤트 = 고정된 값 -->
-        
-        <NavMenu @MenuIndex="SectionMove($event)" :isDark="isDark" @lang="lang=$event" :langList="langList[lang]" @dark="toggleDark()" />
-
-
-        <!-- 라우터는 App.vue에 작성 -->
+        <Intro/>
+    <!-- <NotFound/> -->
         <div ref="section-0">
-            <Home :langList="langList[lang]" />
+            <Home />
         </div>
+        <NavMenu @MenuIndex="SectionMove($event)"/>
         <div ref="section-1">
             <About/>
         </div>
@@ -27,40 +13,27 @@
             <Portfolio/>
         </div>
         <div ref="section-3">
-            <Skill/>
-        </div>
-        <!-- <div ref="section-4">
             <Contact/>
-        </div> -->
-        <!-- <LoadingSpinner v-if="isLoading"></LoadingSpinner> -->
-    <!-- 
-        푸터 영역
-        아래 하단부에 들어갈 거라 탬플릿 안, 제일 하단에 푸터를 라우터 시켜야됌
-      -->
-    <Footer />
-    <!-- 스크롤 탑 버튼 -->
-    <transition name="fade">
-        <div id="pagetop" class="fixed hidden md:block lg:block bg-[#333] right-4 bottom-4 rounded-full z-[999999] transition duration-1000 darkMode dark:bg-[#d9d9d9]" v-show="scY > 300" @click="toTop">
-            <button @click="scrollToTop" class="pt-[10px] pb-[10px] pl-[17px] pr-[17px] opacity-75"><font-awesome-icon class="text-white dark:text-[#333]" icon="fa-solid fa-arrow-up" size="1x" /></button>
         </div>
-    </transition>
-    
+        <SideWidget @dark="toggleDark()" :isDark="isDark"  />
+        <Footer />
 </template>
 
 <script>
 import Home from './pages/Home.vue'
 import Intro from './pages/Intro.vue'
-import About from './pages/Profile.vue'
-import Skill from './pages/Skill.vue'
+import About from './pages/About.vue'
+
+import Contact from './pages/Contact.vue'
 import Portfolio from './pages/Portfolio.vue'
 // import Contact from './pages/Contact.vue'
 
 // 프롭스할 컴포너를 임포트 
 import NavMenu from './components/Nav.vue'
 import Footer from './components/Footer.vue'
-// import FontBox from './components/FontBox.vue'
-// import LoadingSpinner from '@/components/LoadingSpinner.vue';
 import Language from './assets/Language.json'
+import SideWidget from './components/SideWidget.vue'
+
 
 
 // 7.'@vueuse/core' App.vue에 임포트  
@@ -71,22 +44,17 @@ import { useDark, useToggle } from '@vueuse/core'
 export default {
     name: 'App',
     components: {
-        // 3. 컴포넌츠에 설정한 작성, component 아니고 component's'임, 오타 주의
         NavMenu,
         Footer,
-        // FontBox,
         Home,
         About,
-        Skill,
+        Contact,
         Portfolio,
-        // Contact,
-        // LoadingSpinner,
-        Intro
+        Intro,
+        SideWidget
     },
     data() {
         return {
-            // 9.데이터 isDark 변수 작성
-            // 데이터를 전역을 바뀔려면 앱으로 날려야 됌. 그래서 컴포넌트에서 emit을 사용
             lang: 0,
             isDark: useDark(),
             langList : Language,
@@ -139,7 +107,7 @@ export default {
         this.FontStyle = localStorage.getItem("font");
         document.querySelector("body").classList.add("this.FontStyle");
         this.ArrayList = this.$refs;
-        console.log(this.$refs)
+        // console.log(this.$refs)
 
         // 영문 시, 새로고침해도 스토리지에 저장
         this.lang = localStorage.getItem("language");
