@@ -1,6 +1,6 @@
 <!-- 부모컴포넌트 -->
 <template>
-        <Intro/>
+        <!-- <Intro/> -->
     <!-- <NotFound/> -->
     <NavMenu @MenuIndex="SectionMove($event)"/>
         <div ref="section-1">
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import Intro from './pages/Intro.vue'
+// import Intro from './pages/Intro.vue'
 import Home from './pages/Home.vue'
 import About from './pages/About.vue'
 import Portfolio from './pages/Portfolio.vue'
@@ -43,7 +43,7 @@ export default {
     name: 'App',
     components: {
         NavMenu,
-        Intro,
+        // Intro,
         Home,
         About,
         Portfolio,

@@ -1,22 +1,14 @@
 <template>
-    <div class=""></div>
-    <!-- <div class="w-full border dark:text-[#fff]">
-        <ul class="flex justify-around my-[500px]">
-            <li>
-                <img :src="require(`@/assets/Portfolio_icon/icon_5.svg`)" class="icon_animation w-[250px]">
-                <h5 class="text-center text-[30px] mt-20">About</h5>
-            </li>
-            <li>
-                <img :src="require(`@/assets/Portfolio_icon/icon_6.svg`)" class="icon_animation w-[250px]">
-                <h5 class="text-center text-[30px] mt-20">portfolio</h5>
-            </li>
-            <li>
-                <img :src="require(`@/assets/Portfolio_icon/icon_7.svg`)" class="icon_animation w-[250px]">
-                <h5 class="text-center text-[30px] mt-20">Contact</h5>
-            </li>
-        </ul>
-    </div> -->
-    
+    <div class="flex h-[1080px] justify-center mt-56">
+        <div class="imogi">
+            <img :src="require(`@/assets/images/imogi.svg`)" alt="이모지" class="w-[200px]">
+        </div>
+        <div class="text mt-14 ml-10">
+            <h1 class="text-5xl dark:text-white">
+                안녕하세요!<br><span class="text-green-800 dark:text-green-400 font-bold">FE개발자</span> 전민아입니다.
+            </h1>
+        </div>
+    </div>
 </template>
 
 <script>

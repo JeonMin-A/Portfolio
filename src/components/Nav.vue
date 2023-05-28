@@ -9,7 +9,7 @@
         <img :src="require(`@/assets/images/4.svg`)" alt="로고" class="fixed right-[50px] top-[50px] z-20 w-[100px] hidden dark:block">
     </div>
     <!-- nav area -->
-    <ul class="hidden xl:sticky xl:top-10 xl:z-20">
+    <ul class="hidden xl:block xl:sticky xl:top-10 xl:z-20">
         <li class="ml-10 text-[20px] dark:text-[#d9d9d9]  mt-4" v-for="(e, index) in NavList[0]" :key="e">
             <button @click="$emit('MenuIndex', 'section-'+(index+1) )" class="text-3xl hover:opacity-60">{{ e }}</button>
         </li>

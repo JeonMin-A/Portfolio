@@ -1,10 +1,5 @@
 <template>
-    <div class="w-full h-[1080px]">
-        <!-- <div class="hidden relative">sfndsnfksjdnf</div>
-        <img :src="require(`@/assets/Portfolio_icon/icon_5.svg`)" class="w-[300px] absolute left-32 top-[2000px]">
-        <img :src="require(`@/assets/Portfolio_icon/icon_6.svg`)" class="w-[300px] absolute right-52 top-[3000px]">
-        <img :src="require(`@/assets/Portfolio_icon/icon_7.svg`)" class="w-[300px] absolute left-32 top-[4000px]"> -->
-    </div>
+    <div class=""></div>
 </template>
 
 <script>
