@@ -1,13 +1,13 @@
 <template>
     <div class="w-full pt-12 mt-16 px-[2%] pb-8">
         <!-- 카테고리 -->
-        <div class="max-w-7xl mx-auto mt-8">
-            <ul class="flex m-4">
-                <li class="mr-4 border darkMode bg-white py-2 px-5 rounded-md">
-                    <button @click="CateName = '전체'" :class="CateName === '전체' && 'text-emerald-300'" class="text-sm">전체</button>
+        <div class="w-full max-w-7xl mx-auto mt-8">
+            <ul class="flex flex-wrap">
+                <li class="border darkMode bg-white py-2 px-5 rounded-md mr-3">
+                    <button @click="CateName = '전체'" :class="CateName === '전체' && 'text-emerald-300'" class="text-xs">전체</button>
                 </li>
-                <li class="mr-4 border darkMode bg-white py-2 px-2 rounded-md" v-for="e in CateList" :key="e">
-                    <button @click="CateName = e.type" :class="CateName === e.type && 'text-emerald-600'" class="text-sm">{{ e.type }}</button>
+                <li class="border darkMode bg-white py-2 px-2 mr-3 rounded-md mt-3" v-for="e in CateList" :key="e">
+                    <button @click="CateName = e.type" :class="CateName === e.type && 'text-emerald-600'" class="text-xs">{{ e.type }}</button>
                 </li>
             </ul>
         </div>

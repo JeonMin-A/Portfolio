@@ -32,7 +32,7 @@
                     <font-awesome-icon icon="bars" class="text-3xl cursor-pointer md:hidden absolute right-3 top-5 dark:text-[#d9d9d9]" @click="isOpen = true"  />
                 </div>
             </nav>
-            <div class="w-72 h-full fixed darkMode bg-gray-100 z-50 p-12 box-border transition-all duration-500 top-0 -right-80 xl:hidden" :class="isOpen && '!right-[102px]'">
+            <div class="w-72 h-full fixed darkMode bg-gray-100 z-50 p-12 box-border transition-all duration-500 top-0 -right-80 xl:hidden" :class="isOpen && '!right-0'">
                 <font-awesome-icon icon="times" class="absolute top-5 right-5 text-3xl cursor-pointer md:hidden" @click="isOpen === false ? isOpen = true : isOpen=false" />
                 <div class="text-center mt-6">
                     <div class="logo_mobile">
