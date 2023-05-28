@@ -31,14 +31,8 @@
                 <div class="manu_bar">
                     <font-awesome-icon icon="bars" class="text-3xl cursor-pointer md:hidden absolute right-3 top-5 dark:text-[#d9d9d9]" @click="isOpen = true"  />
                 </div>
-                <!-- <div class="logo_mobile">
-                    <img :src="require(`@/assets/images/logo_text.svg`)" alt="로고" class="animate-spin-slow block dark:hidden w-14">
-                    <img :src="require(`@/assets/images/logo_text_white.svg`)" alt="로고" class="animate-spin-slow hidden dark:block w-14">
-                    <img :src="require(`@/assets/images/3.svg`)" alt="로고" class="block dark:hidden w-12">
-                    <img :src="require(`@/assets/images/4.svg`)" alt="로고" class="hidden dark:block w-12">
-                </div> -->
             </nav>
-            <div class="w-72 h-full fixed darkMode bg-gray-100 z-50 p-12 box-border transition-all duration-500 top-0 -right-80 md:hidden" :class="isOpen && '!right-0'">
+            <div class="w-72 h-full fixed darkMode bg-gray-100 z-50 p-12 box-border transition-all duration-500 top-0 -right-80 xl:hidden" :class="isOpen && '!right-[102px]'">
                 <font-awesome-icon icon="times" class="absolute top-5 right-5 text-3xl cursor-pointer md:hidden" @click="isOpen === false ? isOpen = true : isOpen=false" />
                 <div class="text-center mt-6">
                     <div class="logo_mobile">
@@ -69,6 +63,9 @@
                         </a>
                     </li>
                 </ul>
+                <div class="fixed right-10 bottom-6 cursor-pointer">
+                    <font-awesome-icon :icon="isDark ? 'sun' : 'moon'" class="text-4xl text-[#333] dark:text-[#d9d9d9]" @click="$emit('dark')"/>
+                </div>
                 <p class="absolute bottom-0 mb-4">jeonminah01@gmail.com</p>
             </div>
         </div>
@@ -80,7 +77,7 @@ export default {
     name: "NavPage",
     data() {
         return {
-            isOpen: false,
+            isOpen: true,
             // 6.위에서 nav 반복문 돌려줄거라 데이터 안에 변수 작성, [[ex1],[ex2]] 대괄호 안, ex2는 라우터 시킬 path(주소)임.
             // 프롭스 작동을 할려며 부모 컴포넌트에서 가져온 변수를 프롭스 작성해준다.
             NavList: [["Home", "About", "Portfolio", "Contact"], ["Home", "/About", "/Portfolio", "/Contact"], ["user", "code", "folder-open", "address-card"]]
