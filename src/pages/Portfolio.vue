@@ -4,10 +4,10 @@
         <div class="max-w-7xl mx-auto mt-8">
             <ul class="flex m-4">
                 <li class="mr-4 border darkMode bg-white py-2 px-5 rounded-md">
-                    <button @click="CateName = '전체'" :class="CateName === '전체' && 'font-bold text-blue-300'" class="text-sm">전체</button>
+                    <button @click="CateName = '전체'" :class="CateName === '전체' && 'text-emerald-300'" class="text-sm">전체</button>
                 </li>
-                <li class="mr-4 border darkMode bg-white py-2 px-5 rounded-md" v-for="e in CateList" :key="e">
-                    <button @click="CateName = e.type" :class="CateName === e.type && 'font-bold text-blue-800'" class="text-sm">{{ e.type }}</button>
+                <li class="mr-4 border darkMode bg-white py-2 px-2 rounded-md" v-for="e in CateList" :key="e">
+                    <button @click="CateName = e.type" :class="CateName === e.type && 'text-emerald-600'" class="text-sm">{{ e.type }}</button>
                 </li>
             </ul>
         </div>
@@ -27,10 +27,11 @@
                     <h3 class="text-2xl font-bold pt-[10px] pb-[10px] lg:pl-[50px]">
                         {{ e.descTitle }}
                     </h3>
-                    <p class="text-base pt-[10px] pb-[10px] lg:pl-[50px]">{{ e.desc }}</p>
-                    <p class="text-base pt-[10px] pb-[10px] lg:pl-[50px]">사용툴 : <span v-for="el in e.tools" :key="el" class="mr-2 align-middle">{{ el }}</span> </p>
-                    <p class="text-base pt-[10px] pb-[10px] lg:pl-[50px]">작업기간 : {{ e.date }}</p>
-                    <p class="text-base pt-[10px] pb-[10px] lg:pl-[50px]">기여도 : {{ e.contribution }}</p>
+                    <p class="text-sm pt-[10px] pb-[10px] lg:pl-[50px]">{{ e.desc }}</p>
+                    <p class="text-sm pt-[10px] pb-[10px] lg:pl-[50px]">키워드 : <span v-for="el in e.keyword" :key="el" class="mr-2 align-middle">{{ el }}</span> </p>
+                    <p class="text-sm pt-[10px] pb-[10px] lg:pl-[50px]">사용툴 : <span v-for="el in e.tools" :key="el" class="mr-2 align-middle">{{ el }}</span> </p>
+                    <p class="text-sm pt-[10px] pb-[10px] lg:pl-[50px]">작업기간 : {{ e.date }}</p>
+                    <p class="text-sm pt-[10px] pb-[10px] lg:pl-[50px]">기여도 : {{ e.contribution }}</p>
                     <ul class="flex justify-center mt-6">
                         <!-- site -->
                         <li v-if="e.Site"><a :href="e.Site" class="py-1 px-8 border rounded-md darkMode text-sm">Site</a></li>
@@ -69,9 +70,10 @@ export default {
             WorkList: [
                 {
                     "img" : "pds.png",
-                    "descTitle" : "스마트 택배 조회 서비스",
-                    "desc" : "웹앱",
-                    "tools" : ["VS CODE","Vue.js3", "TailwindCSS"],
+                    "descTitle" : "택배 조회 서비스",
+                    "desc" : "스마트 택배 조회 api를 활용한 제작한 국내/외 웹앱",
+                    "keyword": ["#반응형", "#다크모드"],
+                    "tools" : ["Vue.js3", "TailwindCSS"],
                     "date" : "20일 (기획 10일 / 구상5일 / 제작5일)",
                     "contribution" : "100%",
                     "type" : "Publishing",
@@ -83,25 +85,105 @@ export default {
                     "img" : "calculator.png",
                     "descTitle" : "퍼센테이지 계산기",
                     "desc" : "계산기 웹앱",
-                    "tools" : ["VS CODE", "Vue.js3", "VS CODE"],
+                    "keyword": ["#반응형", "#다크모드"],
+                    "tools" : ["Vue.js3", "TailwindCSS"],
                     "date" : "30일 (기획 10일 / 구상10일)",
                     "contribution" : "100%",
                     "type" : "Publishing",
                     "Site" : "https://jeonmin-a.github.io/DeliveryTracking/",
                     "Notion" : "https://jeonmin-a.notion.site/273672f798b644e193c86c6034dffdf0",
-                    "GitHub" : "https://github.com/JeonMin-A/DeliveryTracking_src",
+                    "GitHub" : "https://github.com/JeonMin-A/Calculator-percentage",
                 },
                 {
-                    "img" : "Notion_app_logo.png",
-                    "descTitle" : "퍼센테이지 계산기",
-                    "desc" : "계산기 웹앱",
-                    "tools" : ["VS CODE", "Vue.js3", "VS CODE"],
+                    "img" : "Quiz.png",
+                    "descTitle" : "Quiz",
+                    "desc" : "HTML, CSS, JavaScript에 관한 퀴즈",
+                    "keyword": ["#반응형"],
+                    "tools" : ["Vue.js3", "TailwindCSS"],
                     "date" : "30일 (기획 10일 / 구상10일)",
                     "contribution" : "100%",
                     "type" : "Publishing",
-                    "Site" : "https://jeonmin-a.github.io/DeliveryTracking/",
+                    "Site" : "https://jeonmin-a.github.io/Quiz/",
                     "Notion" : "https://jeonmin-a.notion.site/273672f798b644e193c86c6034dffdf0",
-                    "GitHub" : "https://github.com/JeonMin-A/DeliveryTracking_src",
+                    "GitHub" : "https://github.com/JeonMin-A/Quiz_src",
+                },
+                {
+                    "img" : "ilsangtrip.png",
+                    "descTitle" : "일상과 여행",
+                    "desc" : "클론코딩",
+                    "keyword": ["#인스타그램API"],
+                    "tools" : ["Vue.js3", "SCSS", "Instagram Api"],
+                    "date" : "7일 (기획 10일 / 구상10일)",
+                    "contribution" : "100%",
+                    "type" : "CloneCode",
+                    "Site" : "https://jeonmin-a.github.io/Quiz/",
+                    "Notion" : "https://jeonmin-a.notion.site/273672f798b644e193c86c6034dffdf0",
+                    "GitHub" : "https://github.com/JeonMin-A/Quiz_src",
+                },
+                {
+                    "img" : "waterwork.png",
+                    "descTitle" : "대구광역시 상수도사업본부",
+                    "desc" : "사이트 리디자인",
+                    "keyword": ["#반응형"],
+                    "tools" : ["Vue.js3", "TailwindCSS"],
+                    "date" : "7일 (기획 10일 / 구상10일)",
+                    "contribution" : "100%",
+                    "type" : "Redisign",
+                    "Site" : "https://jeonmin-a.github.io/Quiz/",
+                    "Notion" : "https://jeonmin-a.notion.site/273672f798b644e193c86c6034dffdf0",
+                    "GitHub" : "https://github.com/JeonMin-A/Quiz_src",
+                },
+                {
+                    "img" : "template.png",
+                    "descTitle" : "홈페이지 탬플릿",
+                    "desc" : "사이트 구축",
+                    "keyword": ["#반응형", "#파이어베이스", "#로그인 #게시판 구축"],
+                    "tools" : ["Vue.js3", "TailwindCSS", "FireBase"],
+                    "date" : "30일 (기획 10일 / 구상10일)",
+                    "contribution" : "100%",
+                    "type" : "WepApp",
+                    "Site" : "https://jeonmin-a.github.io/Quiz/",
+                    "Notion" : "https://jeonmin-a.notion.site/273672f798b644e193c86c6034dffdf0",
+                    "GitHub" : "https://github.com/JeonMin-A/Quiz_src",
+                },
+                {
+                    "img" : "nongdal.png",
+                    "descTitle" : "농달 프로젝트",
+                    "desc" : "농림축산 데이터를 활용해 제작한 사이트",
+                    "keyword": ["#반응형", "#FireBase", "#공모전"],
+                    "tools" : ["Vue.js3", "TailwindCSS", "FireBase", "Git", "Figma"],
+                    "date" : "14일 (기획 1일 / 구상10일)",
+                    "contribution" : "100%",
+                    "type" : "TeamProject",
+                    "Site" : "https://jeonmin-a.github.io/Quiz/",
+                    "Notion" : "https://jeonmin-a.notion.site/273672f798b644e193c86c6034dffdf0",
+                    "GitHub" : "https://github.com/JeonMin-A/Quiz_src",
+                },
+                {
+                    "img" : "IKMO.png",
+                    "descTitle" : "IKMO (진행형)",
+                    "desc" : "마구마구 게임 유저들을 위한 실시간 경기 조회",
+                    "keyword": ["#게임", "#백엔드"],
+                    "tools" : ["JavaScript", "CSS", "Figma"],
+                    "date" : "14일 (기획 1일 / 구상10일)",
+                    "contribution" : "70%",
+                    "type" : "TeamProject",
+                    "Site" : "https://jeonmin-a.github.io/Quiz/",
+                    "Notion" : "https://jeonmin-a.notion.site/273672f798b644e193c86c6034dffdf0",
+                    "GitHub" : "https://github.com/JeonMin-A/Quiz_src",
+                },
+                {
+                    "img" : "group.png",
+                    "descTitle" : "근처 모임 찾기 (진행형) ",
+                    "desc" : "근처 모임이나 동호회를 찾아 볼 수 있는 사이트",
+                    "keyword": [""],
+                    "tools" : ["JavaScript", "CSS", "Figma"],
+                    "date" : "14일 (기획 1일 / 구상10일)",
+                    "contribution" : "60%",
+                    "type" : "TeamProject",
+                    "Site" : "https://jeonmin-a.github.io/Quiz/",
+                    "Notion" : "https://jeonmin-a.notion.site/273672f798b644e193c86c6034dffdf0",
+                    "GitHub" : "https://github.com/JeonMin-A/Quiz_src",
                 },
             ]
         }
@@ -141,7 +223,7 @@ export default {
     }
     .swiper-button-prev::after{
         content: '';
-        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='%23000' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd'%3E%3Cpath d='M20 .755l-14.374 11.245 14.374 11.219-.619.781-15.381-12 15.391-12 .609.755z'/%3E%3C/svg%3E");
+        /* background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='%23000' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd'%3E%3Cpath d='M20 .755l-14.374 11.245 14.374 11.219-.619.781-15.381-12 15.391-12 .609.755z'/%3E%3C/svg%3E"); */
         background-size: cover;
         width: 25px;
         height: 25px;
@@ -155,7 +237,7 @@ export default {
     }
     .swiper-button-next::after{
         content: '';
-        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='%23000' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd'%3E%3Cpath d='M4 .755l14.374 11.245-14.374 11.219.619.781 15.381-12-15.391-12-.609.755z'/%3E%3C/svg%3E");
+        /* background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='%23000' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd'%3E%3Cpath d='M4 .755l14.374 11.245-14.374 11.219.619.781 15.381-12-15.391-12-.609.755z'/%3E%3C/svg%3E"); */
         background-size: cover;
         width: 25px;
         height: 25px;
