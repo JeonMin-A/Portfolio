@@ -9,7 +9,7 @@
         <img :src="require(`@/assets/images/4.svg`)" alt="로고" class="fixed right-[50px] top-[50px] z-20 w-[100px] hidden dark:block">
     </div>
     <!-- nav area -->
-    <ul class="sticky top-10 z-20">
+    <ul class="hidden xl:sticky xl:top-10 xl:z-20">
         <li class="ml-10 text-[20px] dark:text-[#d9d9d9]  mt-4" v-for="(e, index) in NavList[0]" :key="e">
             <button @click="$emit('MenuIndex', 'section-'+(index+1) )" class="text-3xl hover:opacity-60">{{ e }}</button>
         </li>
@@ -27,21 +27,27 @@
             <!-- 
                 mobile 
             -->
-            <nav class="h-12 bg-[#d9d9d9]">
-                <div class="logo_mobile text-center">
+            <nav class="absolut top-0 bg-[#d9d9d9]">
+                <div class="manu_bar">
+                    <font-awesome-icon icon="bars" class="text-3xl cursor-pointer md:hidden absolute right-3 top-5 dark:text-[#d9d9d9]" @click="isOpen = true"  />
+                </div>
+                <!-- <div class="logo_mobile">
                     <img :src="require(`@/assets/images/logo_text.svg`)" alt="로고" class="animate-spin-slow block dark:hidden w-14">
                     <img :src="require(`@/assets/images/logo_text_white.svg`)" alt="로고" class="animate-spin-slow hidden dark:block w-14">
                     <img :src="require(`@/assets/images/3.svg`)" alt="로고" class="block dark:hidden w-12">
                     <img :src="require(`@/assets/images/4.svg`)" alt="로고" class="hidden dark:block w-12">
-                </div>
-                <div class="manu_bar">
-                    <font-awesome-icon icon="bars" class="text-3xl cursor-pointer md:hidden absolute right-3 top-5 dark:text-[#d9d9d9]" @click="isOpen = true"  />
-                </div>
+                </div> -->
             </nav>
             <div class="w-72 h-full fixed darkMode bg-gray-100 z-50 p-12 box-border transition-all duration-500 top-0 -right-80 md:hidden" :class="isOpen && '!right-0'">
                 <font-awesome-icon icon="times" class="absolute top-5 right-5 text-3xl cursor-pointer md:hidden" @click="isOpen === false ? isOpen = true : isOpen=false" />
                 <div class="text-center mt-6">
-                    <p>프론트엔드 개발자 전민아</p>
+                    <div class="logo_mobile">
+                        <img :src="require(`@/assets/images/logo_text.svg`)" alt="로고" class="animate-spin-slow block dark:hidden w-40 mx-auto relative">
+                        <img :src="require(`@/assets/images/logo_text_white.svg`)" alt="로고" class="animate-spin-slow hidden dark:block w-40 mx-auto relative">
+                        <img :src="require(`@/assets/images/3.svg`)" alt="로고" class="block dark:hidden w-20 mx-auto absolute top-[111px] right-[104px]">
+                        <img :src="require(`@/assets/images/4.svg`)" alt="로고" class="hidden dark:block w-20 mx-auto absolute top-[111px] right-[104px]">
+                    </div>
+                    <p>FE 개발자 전민아</p>
                 </div>
                 <ul class="mt-12">
                     <li class="py-5 border-b" v-for="(e, index) in NavList[0]" :key="e">
@@ -49,16 +55,21 @@
                         <button @click="$emit('MenuIndex', 'section-'+(index+1) )">{{ e }}</button>
                     </li>
                 </ul>
-                <!-- <ul class=" bottom-3 right-3 flex flex-wrap">
-                    <li>
-                        <font-awesome-icon icon="globe" class="text-2xl" />
+                <ul class="bottom-3 right-64 flex justify-center mt-5">
+                    <!-- Notion -->
+                    <li class="notion mr-4">
+                        <a href="https://jeonmin-a.notion.site/FE-9e441af27b1441908ee34ad8ab4136ed">
+                            <img :src="require(`@/assets/images/Notion_app_logo.png`)" alt="노션" class="w-14">
+                        </a>
                     </li>
-                </ul> -->
-                <ul class="bottom-3 right-64">
-                    <li>
-                        <a href="https://github.com/JeonMina-A"><font-awesome-icon icon="fa-brands fa-github" class="text-2xl" /></a>
+                    <!-- GitHub -->
+                    <li class="github">
+                        <a href="https://github.com/JeonMin-A">
+                            <img :src="require(`@/assets/images/GitHub_logo.png`)" alt="깃허브" class="w-14">
+                        </a>
                     </li>
                 </ul>
+                <p class="absolute bottom-0 mb-4">jeonminah01@gmail.com</p>
             </div>
         </div>
     <!-- </div> -->
@@ -71,10 +82,10 @@ export default {
     data() {
         return {
             // 모 아니면 도 , 
-            isOpen: false,
+            isOpen: true,
             // 6.위에서 nav 반복문 돌려줄거라 데이터 안에 변수 작성, [[ex1],[ex2]] 대괄호 안, ex2는 라우터 시킬 path(주소)임.
             // 프롭스 작동을 할려며 부모 컴포넌트에서 가져온 변수를 프롭스 작성해준다.
-            NavList: [["Home", "About", "Portfolio", "Contact"], ["Home", "/About", "/Portfolio", "/Contact"], ["user", "code", "folder-open"]]
+            NavList: [["Home", "About", "Portfolio", "Contact"], ["Home", "/About", "/Portfolio", "/Contact"], ["user", "code", "folder-open", "address-card"]]
         }
     },
 }

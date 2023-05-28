@@ -3,7 +3,7 @@
         <div class="flex justify-center my-[240px]">
             <div class="Notion mr-48 hover:opacity-70 duration-200">
                 <!-- Notion -->
-                <a href="https://www.notion.so/9e441af27b1441908ee34ad8ab4136ed?pvs=4" target="_blank" class="Notion">
+                <a href="https://jeonmin-a.notion.site/FE-9e441af27b1441908ee34ad8ab4136ed" target="_blank" class="Notion">
                     <img :src="require(`@/assets/images/Notion_app_logo.png`)" alt="노션" class="w-56">
                     <h5 class="text-center text-5xl mt-10 dark:text-[#d9d9d9]">Notion</h5>
                 </a>
