@@ -2,7 +2,7 @@
 <template>
         <!-- <Intro/> -->
     <!-- <NotFound/> -->
-    <NavMenu @MenuIndex="SectionMove($event)"/>
+    <NavMenu @MenuIndex="SectionMove($event)" @dark="toggleDark()" :isDark="isDark" />
         <div ref="section-1">
             <Home />
         </div>
@@ -30,7 +30,7 @@ import Contact from './pages/Contact.vue'
 import NavMenu from './components/Nav.vue'
 import Footer from './components/Footer.vue'
 import Language from './assets/Language.json'
-import SideWidget from './components/SideWidget.vue'
+// import SideWidget from './components/SideWidget.vue'
 
 
 
@@ -48,7 +48,7 @@ export default {
         About,
         Portfolio,
         Contact,
-        SideWidget,
+        // SideWidget,
         Footer,
     },
     data() {

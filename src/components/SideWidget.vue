@@ -1,6 +1,5 @@
 <template>
-  <div class=""></div>
-  <!-- <div class="hidden md:block">
+  <div class="hidden md:block">
         <transition name="fade">
           <div id="pagetop" class="fixed hidden md:block lg:block bg-[#333] right-[85px] bottom-[18px] rounded-full z-[999999] transition duration-1000 darkMode dark:bg-[#d9d9d9]" v-show="scY > 300" @click="toTop">
             <button @click="scrollToTop" class="w-[44px] h-[44px] opacity-75"><font-awesome-icon class="text-1xl text-white dark:text-[#333]" icon="fa-solid fa-arrow-up"/></button>
@@ -9,7 +8,7 @@
         <div class="fixed right-10 bottom-6 cursor-pointer">
           <font-awesome-icon :icon="isDark ? 'sun' : 'moon'" class="text-4xl text-[#333] dark:text-[#d9d9d9]" @click="$emit('dark')"/>
         </div>
-    </div> -->
+    </div>
 </template>
 
 <script>
