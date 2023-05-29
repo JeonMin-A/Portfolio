@@ -7,15 +7,15 @@
             <div class="Notion md:mr-48 hover:opacity-70 duration-200">
                 <!-- Notion -->
                 <a href="https://jeonmin-a.notion.site/FE-9e441af27b1441908ee34ad8ab4136ed" target="_blank" class="Notion">
-                    <img :src="require(`@/assets/images/Notion_app_logo.png`)" alt="노션" class="mx-auto w-20 md:w-40">
-                    <h5 class="text-center text-xl md:text-4xl mt-5 md:mt-9 dark:text-[#d9d9d9]">Notion</h5>
+                    <img :src="require(`@/assets/images/Notion_app_logo.png`)" alt="노션" class="mx-auto w-20 md:w-40 lg:w-[300px]">
+                    <h5 class="text-center text-xl md:text-4xl mt-5 md:mt-9 dark:text-[#d9d9d9] lg:text-5xl">Notion</h5>
                 </a>
             </div>
             <div class="GitHub hover:opacity-70 duration-200">
                 <!-- GitHub -->
                 <a href="https://github.com/JeonMin-A" target="_blank" class="GitHub">
-                    <img :src="require(`@/assets/images/GitHub_logo.png`)" alt="깃허브" class="mx-auto w-20 md:w-40">
-                    <h5 class="text-center text-xl md:text-4xl mt-5 md:mt-9 dark:text-[#d9d9d9]">GitHub</h5>
+                    <img :src="require(`@/assets/images/GitHub_logo.png`)" alt="깃허브" class="mx-auto w-20 md:w-40 lg:w-[300px]">
+                    <h5 class="text-center text-xl md:text-4xl mt-5 md:mt-9 dark:text-[#d9d9d9] lg:text-5xl">GitHub</h5>
                 </a>
             </div>
         </div>
