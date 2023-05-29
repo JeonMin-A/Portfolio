@@ -2,15 +2,15 @@
     <div class="">
         <h3 class="w-full text-center text-3xl dark:text-[#d9d9d9] border-t border-b py-4 uppercase font-semibold">portfolio</h3>
     </div>
-    <div class="max-w-5xl xl:max-w-6xl mx-auto pt-12 px-[2%] pb-8">
+    <div class="max-w-5xl xl:max-w-7xl mx-auto pt-12 px-[2%] pb-8 lg:my-[200px]">
         <!-- 카테고리 -->
         <div class="w-full mx-auto mt-8">
             <ul class="flex flex-wrap">
                 <li class="border darkMode bg-white mr-3 mb-2 rounded-md">
-                    <button @click="CateName = '전체'" :class="CateName === '전체' && 'text-lime-700 dark:text-lime-400'" class="text-xs py-2 px-5">전체</button>
+                    <button @click="CateName = '전체'" :class="CateName === '전체' && 'text-lime-700 dark:text-lime-400'" class="text-xs py-2 px-5 lg:text-lg">전체</button>
                 </li>
                 <li class="border darkMode bg-white mr-3 mb-2 rounded-md" v-for="e in CateList" :key="e">
-                    <button @click="CateName = e.type" :class="CateName === e.type && 'text-emerald-600'" class="text-xs py-2 px-2">{{ e.type }}</button>
+                    <button @click="CateName = e.type" :class="CateName === e.type && 'text-emerald-600'" class="text-xs py-2 px-2 lg:text-lg lg:py-3 lg:px-4">{{ e.type }}</button>
                 </li>
             </ul>
         </div>
@@ -18,7 +18,7 @@
         <!-- 
             contents 
         -->
-        <div class="w-full xl:max-w-6xl mx-auto mt-8">
+        <div class="w-full lg:max-w-7xl mx-auto mt-8">
             <swiper :pagination="{type: 'progressbar',}" :navigation="true" :modules="modules" :keyboard="true" :cssMode="true" class="mySwiper">
                 <swiper-slide v-for="e in CateItem" :key="e">
                     <div class="bg-white mb-8 pt-12 group px-8 pb-16 rounded-md flex border darkMode flex-wrap">
@@ -37,11 +37,11 @@
                     <!-- <p class="text-sm pt-[10px] pb-[10px] md:pl-[50px]">기여도 : {{ e.contribution }}</p> -->
                     <ul class="flex justify-center mt-6">
                         <!-- site -->
-                        <li v-if="e.Site"><a :href="e.Site" class="py-1 px-8 border rounded-md darkMode text-sm">Site</a></li>
+                        <li v-if="e.Site"><a :href="e.Site" class="py-1 px-8 border rounded-md darkMode text-sm lg:text-lg lg:py-2">Site</a></li>
                         <!-- notion -->
-                        <li v-if="e.Notion"><a :href="e.Notion" :class="e.Notion === '' && 'hidden'" class="py-1 px-5 border rounded-md darkMode text-sm mx-4" target="_blank">Notion</a></li>
+                        <li v-if="e.Notion"><a :href="e.Notion" :class="e.Notion === '' && 'hidden'" class="py-1 px-5 border rounded-md darkMode text-sm mx-4 lg:text-lg lg:py-2" target="_blank">Notion</a></li>
                         <!-- github -->
-                        <li v-if="e.GitHub"><a :href="e.GitHub" :class="e.GitHub === '' && 'hidden'" class="py-1 px-5 border rounded-md darkMode text-sm" target="_blank">GitHub</a></li>
+                        <li v-if="e.GitHub"><a :href="e.GitHub" :class="e.GitHub === '' && 'hidden'" class="py-1 px-5 border rounded-md darkMode text-sm lg:text-lg lg:py-2" target="_blank">GitHub</a></li>
                         <!-- <li v-if="e.redesign"><a :href="e.redesign" :class="e.redesign === '' && 'hidden'" class="py-1 px-8 border rounded-md darkMode text-sm" target="_blank">{{ e.type === 'Publishing' ? 'Clone' : 'Redesign' }}</a></li> -->
                     </ul>
                 </div>

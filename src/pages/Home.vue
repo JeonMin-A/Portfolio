@@ -1,10 +1,10 @@
 <template>
-    <div class="mt-[300px] flex flex-col md:flex-row justify-center my-56 gap-x-10">
+    <div class="mt-[300px] xl:mt-0 xl:py-60 flex flex-col md:flex-row justify-center my-56 gap-x-10 xl:gap-x-20">
         <div class="imogi mx-auto md:mx-0">
-            <img :src="require(`@/assets/images/imogi.svg`)" alt="이모지" class="w-[200px]">
+            <img :src="require(`@/assets/images/imogi.svg`)" alt="이모지" class="w-[200px] xl:w-[300px]">
         </div>
         <div class="text mt-14 md:mr-8">
-            <h1 class="text-3xl text-center dark:text-white lg:text-5xl">
+            <h1 class="text-3xl text-center dark:text-white lg:text-5xl xl:text-6xl">
                 안녕하세요!<br><span class="text-green-800 dark:text-lime-400 font-bold">FE개발자</span> 전민아입니다.
             </h1>
         </div>
