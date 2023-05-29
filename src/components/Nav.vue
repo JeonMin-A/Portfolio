@@ -27,7 +27,13 @@
             <!-- 
                 mobile 
             -->
-            <nav class="md:hidden fixed w-full h-[70px] md:h-0 z-50 top-0 bg-[#fff] dark:bg-[#333]">
+            <nav class="md:hidden fixed w-full h-[70px] md:h-0 z-50 top-0 bg-[#fff] dark:bg-[#1d1c21]">
+                <!-- <div class="logo_mobile">
+                    <img :src="require(`@/assets/images/logo_text.svg`)" alt="로고" class="animate-spin-slow block dark:hidden w-20 mb mx-auto relative">
+                    <img :src="require(`@/assets/images/logo_text_white.svg`)" alt="로고" class="animate-spin-slow hidden dark:block w-20 mx-auto relative">
+                    <img :src="require(`@/assets/images/3.svg`)" alt="로고" class="block dark:hidden w-10 mx-auto absolute top-[20px] right-[175px]">
+                    <img :src="require(`@/assets/images/4.svg`)" alt="로고" class="hidden dark:block w-20 mx-auto absolute top-[111px] right-[104px]">
+                </div> -->
                 <div class="manu_bar">
                     <font-awesome-icon icon="bars" class="text-3xl cursor-pointer md:hidden absolute right-3 top-5 dark:text-[#d9d9d9]" @click="isOpen = true"  />
                 </div>
@@ -35,11 +41,12 @@
             <div class="w-72 h-full fixed darkMode bg-gray-100 z-50 p-12 box-border transition-all duration-500 top-0 -right-80 xl:hidden" :class="isOpen && '!right-0'">
                 <font-awesome-icon icon="times" class="absolute top-5 right-5 text-3xl cursor-pointer md:hidden" @click="isOpen === false ? isOpen = true : isOpen=false" />
                 <div class="text-center mt-6">
-                    <div class="logo_mobile">
+                    <div class="logo_mobile mb-5">
                         <img :src="require(`@/assets/images/logo_text.svg`)" alt="로고" class="animate-spin-slow block dark:hidden w-40 mx-auto relative">
                         <img :src="require(`@/assets/images/logo_text_white.svg`)" alt="로고" class="animate-spin-slow hidden dark:block w-40 mx-auto relative">
                         <img :src="require(`@/assets/images/3.svg`)" alt="로고" class="block dark:hidden w-20 mx-auto absolute top-[111px] right-[104px]">
                         <img :src="require(`@/assets/images/4.svg`)" alt="로고" class="hidden dark:block w-20 mx-auto absolute top-[111px] right-[104px]">
+                        <!-- <img :src="require(`@/assets/images/img.svg`)" alt="" class="z-50 rounded-full"> -->
                     </div>
                     <p>FE 개발자 전민아</p>
                 </div>
@@ -49,17 +56,17 @@
                         <button @click="$emit('MenuIndex', 'section-'+(index+1) )">{{ e }}</button>
                     </li>
                 </ul>
-                <ul class="bottom-3 right-64 flex justify-center mt-5">
+                <ul class="bottom-3 right-64 flex justify-center mt-10">
                     <!-- Notion -->
-                    <li class="notion mr-4">
+                    <li class="notion mr-10">
                         <a href="https://jeonmin-a.notion.site/FE-9e441af27b1441908ee34ad8ab4136ed">
-                            <img :src="require(`@/assets/images/Notion_app_logo.png`)" alt="노션" class="w-14">
+                            <img :src="require(`@/assets/images/Notion_app_logo.png`)" alt="노션" class="w-12">
                         </a>
                     </li>
                     <!-- GitHub -->
                     <li class="github">
                         <a href="https://github.com/JeonMin-A">
-                            <img :src="require(`@/assets/images/GitHub_logo.png`)" alt="깃허브" class="w-14">
+                            <img :src="require(`@/assets/images/GitHub_logo.png`)" alt="깃허브" class="w-12">
                         </a>
                     </li>
                 </ul>
