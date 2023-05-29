@@ -1,7 +1,9 @@
 <template>
     <div class="w-full bg-white dark:bg-[#1d1c21] dark:text-[#d9d9d9] py-4 text-center text-xs lg:text-lg">
         <div class="mx-5">
-            <img :src="require(`@/assets/images/openkakao_qrcode.png`)" alt="오픈카카오톡큐알코드" class="w-[130px] absolute ml-5 hidden md:block md:w-[90px] md:ml-1 lg:w-[132px] lg:pb-1">
+            <a href="https://open.kakao.com/o/sQ9xTLmf">
+                <img :src="require(`@/assets/images/openkakao_qrcode.png`)" alt="오픈카카오톡큐알코드" class="w-[130px] absolute ml-5 hidden md:block md:w-[90px] md:ml-1 lg:w-[132px] lg:pb-1">
+            </a>
         </div>
         <div class="top md:my-5">
             <p class="mb-3">본 사이트의 모든 컨텐츠는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었음을 알려드립니다.</p>
