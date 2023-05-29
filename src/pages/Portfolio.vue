@@ -31,7 +31,7 @@
                     <p class="text-sm pt-[10px] pb-[10px] md:pl-[50px]">키워드 : <span v-for="el in e.keyword" :key="el" class="mr-2 align-middle">{{ el }}</span> </p>
                     <p class="text-sm pt-[10px] pb-[10px] md:pl-[50px]">사용툴 : <span v-for="el in e.tools" :key="el" class="mr-2 align-middle">{{ el }}</span> </p>
                     <p class="text-sm pt-[10px] pb-[10px] md:pl-[50px]">작업기간 : {{ e.date }}</p>
-                    <p class="text-sm pt-[10px] pb-[10px] md:pl-[50px]">기여도 : {{ e.contribution }}</p>
+                    <!-- <p class="text-sm pt-[10px] pb-[10px] md:pl-[50px]">기여도 : {{ e.contribution }}</p> -->
                     <ul class="flex justify-center mt-6">
                         <!-- site -->
                         <li v-if="e.Site"><a :href="e.Site" class="py-1 px-8 border rounded-md darkMode text-sm">Site</a></li>

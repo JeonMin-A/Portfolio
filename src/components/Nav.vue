@@ -27,7 +27,7 @@
             <!-- 
                 mobile 
             -->
-            <nav class="absolut top-0 bg-[#d9d9d9]">
+            <nav class="md:hidden fixed w-full h-[70px] md:h-0 z-50 top-0 bg-[#d9d9d9] dark:bg-[#333]">
                 <div class="manu_bar">
                     <font-awesome-icon icon="bars" class="text-3xl cursor-pointer md:hidden absolute right-3 top-5 dark:text-[#d9d9d9]" @click="isOpen = true"  />
                 </div>

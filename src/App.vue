@@ -1,13 +1,12 @@
-<!-- 부모컴포넌트 -->
 <template>
         <!-- <Intro/> -->
     <!-- <NotFound/> -->
     <NavMenu @MenuIndex="SectionMove($event)" @dark="toggleDark()" :isDark="isDark" />
-        <div ref="section-1">
-            <Home />
-        </div>
+    <div ref="section-1">
+        <Home />
+    </div>
         <div ref="section-2">
-            <About/>
+            <!-- <About/> -->
         </div>
         <div ref="section-3">
             <Portfolio/>
@@ -22,7 +21,7 @@
 <script>
 // import Intro from './pages/Intro.vue'
 import Home from './pages/Home.vue'
-import About from './pages/About.vue'
+// import About from './pages/About.vue'
 import Portfolio from './pages/Portfolio.vue'
 import Contact from './pages/Contact.vue'
 
@@ -45,7 +44,7 @@ export default {
         NavMenu,
         // Intro,
         Home,
-        About,
+        // About,
         Portfolio,
         Contact,
         // SideWidget,
@@ -87,10 +86,11 @@ export default {
         },
         SectionMove(index) {
             this.MenuIndex = index;
+            console.log(this.MenuIndex)
             // 크기 위치값
             const rect = this.ArrayList[this.MenuIndex].getBoundingClientRect();
             // console.log(rect)
-            const offset = rect.top + window.scrollY - 60;
+            const offset = rect.top + window.scrollY;
             window.scrollTo({
                 top: offset,
                 behavior: 'smooth'
