@@ -10,7 +10,7 @@
     </div>
     <!-- nav area -->
     <ul class="hidden xl:block xl:sticky xl:top-10 xl:z-20">
-        <li class="ml-10 text-[20px] dark:text-[#d9d9d9]  mt-4" v-for="(e, index) in NavList[0]" :key="e">
+        <li class="ml-6 text-[20px] dark:text-[#d9d9d9]  mt-4" v-for="(e, index) in NavList[0]" :key="e">
             <button @click="$emit('MenuIndex', 'section-'+(index+1) )" class="text-3xl hover:opacity-60">{{ e }}</button>
         </li>
     </ul>

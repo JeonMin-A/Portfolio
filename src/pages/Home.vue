@@ -5,7 +5,7 @@
         </div>
         <div class="text mt-14">
             <h1 class="text-3xl text-center dark:text-white">
-                안녕하세요!<br><span class="text-green-800 dark:text-green-400 font-bold">FE개발자</span> 전민아입니다.
+                안녕하세요!<br><span class="text-green-800 dark:text-lime-400 font-bold">FE개발자</span> 전민아입니다.
             </h1>
         </div>
     </div>

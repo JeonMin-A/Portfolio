@@ -1,10 +1,10 @@
 <template>
-    <div class="w-full pt-12 mt-16 px-[2%] pb-8">
+    <div class="max-w-5xl mx-auto pt-12 mt-16 px-[2%] pb-8">
         <!-- 카테고리 -->
-        <div class="w-full max-w-7xl mx-auto mt-8">
+        <div class="w-full mx-auto mt-8">
             <ul class="flex flex-wrap">
                 <li class="border darkMode bg-white py-2 px-5 rounded-md mr-3">
-                    <button @click="CateName = '전체'" :class="CateName === '전체' && 'text-emerald-300'" class="text-xs">전체</button>
+                    <button @click="CateName = '전체'" :class="CateName === '전체' && 'text-lime-300'" class="text-xs">전체</button>
                 </li>
                 <li class="border darkMode bg-white py-2 px-2 mr-3 rounded-md mt-3" v-for="e in CateList" :key="e">
                     <button @click="CateName = e.type" :class="CateName === e.type && 'text-emerald-600'" class="text-xs">{{ e.type }}</button>
@@ -19,19 +19,19 @@
             <swiper :pagination="{type: 'progressbar',}" :navigation="true" :modules="modules" :keyboard="true" :cssMode="true" class="mySwiper">
                 <swiper-slide v-for="e in CateItem" :key="e">
                     <div class="bg-white mb-8 pt-12 group px-8 pb-16 rounded-md flex border darkMode flex-wrap">
-                <div class="basis-[48%] relative mx-auto">
+                <div class="md:basis-[48%] lg:basis-[40%] relative mx-auto items-center flex">
                     <!-- img  -->
-                    <img class="w-full  " :src="require(`@/assets/images/${e.img}`)">
+                    <img class="w-full" :src="require(`@/assets/images/${e.img}`)">
                 </div>
-                <div class="basis-full md:basis-[52%] pt-10 group-even:order-2 xl:group-even:order-1">
-                    <h3 class="text-2xl font-bold pt-[10px] pb-[10px] lg:pl-[50px]">
+                <div class="basis-full md:basis-[52%] pt-10">
+                    <h3 class="text-2xl font-bold pt-[10px] pb-[10px] md:pl-[50px]">
                         {{ e.descTitle }}
                     </h3>
-                    <p class="text-sm pt-[10px] pb-[10px] lg:pl-[50px]">{{ e.desc }}</p>
-                    <p class="text-sm pt-[10px] pb-[10px] lg:pl-[50px]">키워드 : <span v-for="el in e.keyword" :key="el" class="mr-2 align-middle">{{ el }}</span> </p>
-                    <p class="text-sm pt-[10px] pb-[10px] lg:pl-[50px]">사용툴 : <span v-for="el in e.tools" :key="el" class="mr-2 align-middle">{{ el }}</span> </p>
-                    <p class="text-sm pt-[10px] pb-[10px] lg:pl-[50px]">작업기간 : {{ e.date }}</p>
-                    <p class="text-sm pt-[10px] pb-[10px] lg:pl-[50px]">기여도 : {{ e.contribution }}</p>
+                    <p class="text-sm pt-[10px] pb-[10px] md:pl-[50px]">{{ e.desc }}</p>
+                    <p class="text-sm pt-[10px] pb-[10px] md:pl-[50px]">키워드 : <span v-for="el in e.keyword" :key="el" class="mr-2 align-middle">{{ el }}</span> </p>
+                    <p class="text-sm pt-[10px] pb-[10px] md:pl-[50px]">사용툴 : <span v-for="el in e.tools" :key="el" class="mr-2 align-middle">{{ el }}</span> </p>
+                    <p class="text-sm pt-[10px] pb-[10px] md:pl-[50px]">작업기간 : {{ e.date }}</p>
+                    <p class="text-sm pt-[10px] pb-[10px] md:pl-[50px]">기여도 : {{ e.contribution }}</p>
                     <ul class="flex justify-center mt-6">
                         <!-- site -->
                         <li v-if="e.Site"><a :href="e.Site" class="py-1 px-8 border rounded-md darkMode text-sm">Site</a></li>
@@ -176,7 +176,7 @@ export default {
                     "img" : "group.png",
                     "descTitle" : "근처 모임 찾기 (진행형) ",
                     "desc" : "근처 모임이나 동호회를 찾아 볼 수 있는 사이트",
-                    "keyword": [""],
+                    "keyword": ["#웹앱"],
                     "tools" : ["JavaScript", "CSS", "Figma"],
                     "date" : "14일 (기획 1일 / 구상10일)",
                     "contribution" : "60%",
@@ -243,4 +243,15 @@ export default {
         height: 25px;
         right: 20px;
     }
+
+    .swiper-pagination-progressbar-fill {
+        border: 2px solid rgba(255, 255, 255, 0.719);
+        border-radius: 5px;
+    }
+
+    .swiper-pagination-progressbar {
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 5px;
+    }
+    
 </style>
