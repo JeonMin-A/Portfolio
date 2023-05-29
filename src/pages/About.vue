@@ -1,4 +1,7 @@
 <template>
+    <div class="">
+        <h3 class="w-full text-center text-3xl dark:text-[#d9d9d9] border-t border-b py-4 uppercase font-semibold">about</h3>
+    </div>
     <div class="w-full h-[1080px]">
         <!-- <div class="hidden relative">sfndsnfksjdnf</div>
         <img :src="require(`@/assets/Portfolio_icon/icon_5.svg`)" class="w-[300px] absolute left-32 top-[2000px]">

@@ -1,5 +1,8 @@
 <template>
-    <div class="max-w-5xl xl:max-w-6xl mx-auto pt-12 mt-16 px-[2%] pb-8">
+    <div class="">
+        <h3 class="w-full text-center text-3xl dark:text-[#d9d9d9] border-t border-b py-4 uppercase font-semibold">portfolio</h3>
+    </div>
+    <div class="max-w-5xl xl:max-w-6xl mx-auto pt-12 px-[2%] pb-8">
         <!-- 카테고리 -->
         <div class="w-full mx-auto mt-8">
             <ul class="flex flex-wrap">

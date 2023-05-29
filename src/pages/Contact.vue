@@ -1,4 +1,7 @@
 <template>
+    <div class="">
+        <h3 class="w-full text-center text-3xl dark:text-[#d9d9d9] border-t border-b py-4 uppercase font-semibold">contact</h3>
+    </div>
     <div class="Contact w-full">
         <div class="flex justify-around md:justify-center my-[240px]">
             <div class="Notion md:mr-48 hover:opacity-70 duration-200">
