@@ -3,7 +3,7 @@
         <h3 class="w-full text-center text-3xl dark:text-[#d9d9d9] border-t border-b py-4 uppercase font-semibold">contact</h3>
     </div>
     <div class="Contact w-full">
-        <div class="flex justify-around md:justify-center my-[240px]">
+        <div class="flex justify-around md:justify-center my-[140px]">
             <div class="Notion md:mr-48 hover:opacity-70 duration-200">
                 <!-- Notion -->
                 <a href="https://jeonmin-a.notion.site/FE-9e441af27b1441908ee34ad8ab4136ed" target="_blank" class="Notion">

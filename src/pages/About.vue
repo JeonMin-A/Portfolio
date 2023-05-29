@@ -2,11 +2,11 @@
     <div class="">
         <h3 class="w-full text-center text-3xl dark:text-[#d9d9d9] border-t border-b py-4 uppercase font-semibold">about</h3>
     </div>
-    <div class="w-full h-[1080px]">
-        <!-- <div class="hidden relative">sfndsnfksjdnf</div>
-        <img :src="require(`@/assets/Portfolio_icon/icon_5.svg`)" class="w-[300px] absolute left-32 top-[2000px]">
-        <img :src="require(`@/assets/Portfolio_icon/icon_6.svg`)" class="w-[300px] absolute right-52 top-[3000px]">
-        <img :src="require(`@/assets/Portfolio_icon/icon_7.svg`)" class="w-[300px] absolute left-32 top-[4000px]"> -->
+    <div class="w-full py-20 lg:flex">
+        <img :src="require(`@/assets/images/img.svg`)" alt="프로필사진" class="rounded-full w-[500px] mx-auto border p-10 my-10">
+        <div class="flex justify-center my-10 ">
+            <div class="text-base mx-3 md:text-xl font-semibold dark:text-[#d9d9d9]">#저는_팀원들과_함께_가치있는_일을_만들어내는_것을 좋아합니다!</div>
+        </div>
     </div>
 </template>
 
