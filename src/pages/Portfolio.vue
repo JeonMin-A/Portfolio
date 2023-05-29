@@ -3,10 +3,10 @@
         <!-- 카테고리 -->
         <div class="w-full mx-auto mt-8">
             <ul class="flex flex-wrap">
-                <li class="border darkMode bg-white rounded-md mr-3">
-                    <button @click="CateName = '전체'" :class="CateName === '전체' && 'text-lime-300'" class="text-xs py-2 px-5">전체</button>
+                <li class="border darkMode bg-white mr-3 mb-2 rounded-md">
+                    <button @click="CateName = '전체'" :class="CateName === '전체' && 'text-lime-700 dark:text-lime-400'" class="text-xs py-2 px-5">전체</button>
                 </li>
-                <li class="border darkMode bg-white mr-3 rounded-md" v-for="e in CateList" :key="e">
+                <li class="border darkMode bg-white mr-3 mb-2 rounded-md" v-for="e in CateList" :key="e">
                     <button @click="CateName = e.type" :class="CateName === e.type && 'text-emerald-600'" class="text-xs py-2 px-2">{{ e.type }}</button>
                 </li>
             </ul>
@@ -15,7 +15,7 @@
         <!-- 
             contents 
         -->
-        <div class="max-w-7xl mx-auto mt-8">
+        <div class="w-full xl:max-w-6xl mx-auto mt-8">
             <swiper :pagination="{type: 'progressbar',}" :navigation="true" :modules="modules" :keyboard="true" :cssMode="true" class="mySwiper">
                 <swiper-slide v-for="e in CateItem" :key="e">
                     <div class="bg-white mb-8 pt-12 group px-8 pb-16 rounded-md flex border darkMode flex-wrap">
@@ -245,12 +245,12 @@ export default {
     }
 
     .swiper-pagination-progressbar-fill {
-        border: 2px solid rgba(255, 255, 255, 0.719);
+        border: 2px solid lightgray;
         border-radius: 5px;
     }
 
     .swiper-pagination-progressbar {
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: lightgrey;
         border-radius: 5px;
     }
     

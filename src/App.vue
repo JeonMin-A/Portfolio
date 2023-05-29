@@ -6,7 +6,7 @@
         <Home />
     </div>
         <div ref="section-2">
-            <!-- <About/> -->
+            <About/>
         </div>
         <div ref="section-3">
             <Portfolio/>
@@ -21,7 +21,7 @@
 <script>
 // import Intro from './pages/Intro.vue'
 import Home from './pages/Home.vue'
-// import About from './pages/About.vue'
+import About from './pages/About.vue'
 import Portfolio from './pages/Portfolio.vue'
 import Contact from './pages/Contact.vue'
 
@@ -44,7 +44,7 @@ export default {
         NavMenu,
         // Intro,
         Home,
-        // About,
+        About,
         Portfolio,
         Contact,
         // SideWidget,

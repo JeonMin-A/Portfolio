@@ -27,7 +27,7 @@
             <!-- 
                 mobile 
             -->
-            <nav class="md:hidden fixed w-full h-[70px] md:h-0 z-50 top-0 bg-[#d9d9d9] dark:bg-[#333]">
+            <nav class="md:hidden fixed w-full h-[70px] md:h-0 z-50 top-0 bg-[#fff] dark:bg-[#333]">
                 <div class="manu_bar">
                     <font-awesome-icon icon="bars" class="text-3xl cursor-pointer md:hidden absolute right-3 top-5 dark:text-[#d9d9d9]" @click="isOpen = true"  />
                 </div>
@@ -63,10 +63,10 @@
                         </a>
                     </li>
                 </ul>
-                <div class="absolute right-10 bottom-6 cursor-pointer">
-                    <font-awesome-icon :icon="isDark ? 'sun' : 'moon'" class="text-4xl text-[#333] dark:text-[#d9d9d9]" @click="$emit('dark')"/>
+                <div class="absolute right-3 bottom-3 cursor-pointer border px-3 py-2 rounded">
+                    <font-awesome-icon :icon="isDark ? 'sun' : 'moon'" class="text-xl text-[#333] dark:text-[#d9d9d9]" @click="$emit('dark')"/>
                 </div>
-                <p class="absolute bottom-0 mb-4">jeonminah01@gmail.com</p>
+                <p class="absolute bottom-0 right-[70px] mb-4 text-xs">jeonminah01@gmail.com</p>
             </div>
         </div>
 </template>
@@ -77,7 +77,7 @@ export default {
     name: "NavPage",
     data() {
         return {
-            isOpen: false,
+            isOpen: true,
             // 6.위에서 nav 반복문 돌려줄거라 데이터 안에 변수 작성, [[ex1],[ex2]] 대괄호 안, ex2는 라우터 시킬 path(주소)임.
             // 프롭스 작동을 할려며 부모 컴포넌트에서 가져온 변수를 프롭스 작성해준다.
             NavList: [["Home", "About", "Portfolio", "Contact"], ["Home", "/About", "/Portfolio", "/Contact"], ["user", "code", "folder-open", "address-card"]]
