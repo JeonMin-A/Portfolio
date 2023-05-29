@@ -1,6 +1,6 @@
 <template>
     <div class="">
-        <h3 class="w-full text-center text-3xl dark:text-[#d9d9d9] border-t border-b py-4 uppercase font-semibold">contact</h3>
+        <h3 class="w-full text-center text-3xl dark:text-[#d9d9d9] border-t border-b border-black dark:border-gray-300 py-4 uppercase font-semibold">contact</h3>
     </div>
     <div class="Contact w-full lg:my-[300px]">
         <div class="flex justify-around md:justify-center my-[140px]">

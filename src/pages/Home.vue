@@ -8,7 +8,7 @@
                 안녕하세요!
             </h2>
             <h2 class="text-3xl text-center dark:text-white lg:text-5xl xl:text-6xl tracking-wide">
-                <span class="text-green-800 dark:text-lime-400 font-bold">FE개발자</span> 전민아입니다</h2>
+                <span class="text-lime-600 dark:text-lime-400 font-bold">FE개발자</span> 전민아입니다</h2>
         </div>
     </div>
 </template>

@@ -1,16 +1,16 @@
 <template>
     <div class="">
-        <h3 class="w-full text-center text-3xl dark:text-[#d9d9d9] border-t border-b py-4 uppercase font-semibold">portfolio</h3>
+        <h3 class="w-full text-center text-3xl dark:text-[#d9d9d9] border-t border-b border-black dark:border-gray-300 py-4 uppercase font-semibold">portfolio</h3>
     </div>
     <div class="max-w-5xl xl:max-w-7xl mx-auto pt-12 px-[2%] pb-8 lg:my-[200px]">
         <!-- 카테고리 -->
         <div class="w-full mx-auto mt-8">
             <ul class="flex flex-wrap">
                 <li class="border darkMode bg-white mr-3 mb-2 rounded-md">
-                    <button @click="CateName = '전체'" :class="CateName === '전체' && 'text-lime-700 dark:text-lime-400'" class="text-xs py-2 px-5 lg:text-lg">전체</button>
+                    <button @click="CateName = '전체'" :class="CateName === '전체' && 'text-lime-600 dark:text-lime-400'" class="text-xs py-2 px-5 lg:text-lg">전체</button>
                 </li>
                 <li class="border darkMode bg-white mr-3 mb-2 rounded-md" v-for="e in CateList" :key="e">
-                    <button @click="CateName = e.type" :class="CateName === e.type && 'text-emerald-600'" class="text-xs py-2 px-2 lg:text-lg lg:py-3 lg:px-4">{{ e.type }}</button>
+                    <button @click="CateName = e.type" :class="CateName === e.type && 'text-lime-800'" class="text-xs py-2 px-2 lg:text-lg lg:py-3 lg:px-4">{{ e.type }}</button>
                 </li>
             </ul>
         </div>

@@ -8,9 +8,9 @@
             <p class="mb-3">This website's content is created for personal portfolio purposes and not for commercial use.</p>
             <p class="mb-3 md:mb-2 lg:mb-3">jeonminah01@gmail.com</p>
         </div>
-        <div class="bottom text-[10px] border-t border-t-[#777] lg:text-lg">
+        <div class="bottom text-[10px] border-t border-t-[#999] lg:text-lg">
             <p class="mt-3 lg:mb-3">ⓒ 2023. Jeon Min-A all rights reserved.</p>
-            <p class="text-[#999] dark:text-[#555]">LastUpdate : 2023.05.29</p>
+            <p class="text-[#999] dark:text-[#555]">LastUpdate : 2023.05.30</p>
         </div>
     </div>
 </template>
