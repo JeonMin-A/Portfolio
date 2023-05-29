@@ -93,7 +93,7 @@ export default {
                     "date" : "30일 (기획 10일 / 구상10일)",
                     "contribution" : "100%",
                     "type" : "Publishing",
-                    "Site" : "https://jeonmin-a.github.io/DeliveryTracking/",
+                    "Site" : "https://jeonmin-a.github.io/Calculator-percentage/",
                     "Notion" : "https://jeonmin-a.notion.site/273672f798b644e193c86c6034dffdf0",
                     "GitHub" : "https://github.com/JeonMin-A/Calculator-percentage",
                 },
