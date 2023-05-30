@@ -2,7 +2,7 @@
     <div class="">
         <h3 class="w-full text-center text-3xl dark:text-[#d9d9d9] border-t border-b border-black dark:border-gray-300 py-4 uppercase font-semibold">portfolio</h3>
     </div>
-    <div class="max-w-5xl xl:max-w-7xl mx-auto pt-12 px-[2%] pb-8 lg:my-[200px]">
+    <div class="max-w-5xl xl:max-w-6xl mx-auto pt-12 px-[2%] pb-8 lg:my-[200px]">
         <!-- 카테고리 -->
         <div class="w-full mx-auto mt-8">
             <ul class="flex flex-wrap">

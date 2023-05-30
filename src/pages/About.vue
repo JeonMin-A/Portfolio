@@ -3,10 +3,10 @@
         <h3 class="w-full text-center text-3xl dark:text-[#d9d9d9] border-t border-b border-black dark:border-gray-300 py-4 uppercase font-semibold">about</h3>
     </div>
     <div class="w-full py-20 lg:flex lg:justify-center lg:my-[200px]">
-        <img :src="require(`@/assets/images/img.svg`)" alt="프로필사진" class="rounded-full w-[500px] mx-auto border border-black dark:border-gray-300 p-10 my-10 lg:mx-0">
+        <img :src="require(`@/assets/images/img.svg`)" alt="프로필사진" class="rounded-full w-[300px] mx-auto border border-black dark:border-gray-300 p-10 my-10 lg:mx-0">
 
-        <div class="flex justify-center my-10 lg:items-center lg:ml-20 ">
-            <div class="text-base mx-3 md:text-xl lg:text-3xl font-semibold dark:text-[#d9d9d9]">#저는_팀원들과_함께_가치있는_일을_만들어내는_것을 좋아합니다!</div>
+        <div class="flex justify-center my-10 lg:items-center ">
+            <div class="text-base mx-3 md:text-xl lg:text-3xl font-semibold dark:text-[#d9d9d9]">#저는_팀원들과_함께_가치있는_일을_만들어내는_것을_좋아합니다!</div>
         </div>
     </div>
 </template>
