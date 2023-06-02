@@ -8,26 +8,19 @@
         <img :src="require(`@/assets/images/3.svg`)" alt="로고" class="fixed right-[50px] top-[50px] z-20 w-[100px] block dark:hidden">
         <img :src="require(`@/assets/images/4.svg`)" alt="로고" class="fixed right-[50px] top-[50px] z-20 w-[100px] hidden dark:block">
     </div>
-    <!-- nav area -->
+    <!-- 
+        nav
+    -->
     <ul class="hidden lg:inline-block md:sticky md:top-4 md:z-20">
         <li class="ml-6 text-[20px] dark:text-[#d9d9d9]  mt-4" v-for="(e, index) in NavList[0]" :key="e">
             <button @click="$emit('MenuIndex', 'section-'+(index+1) )" class="lg:text-xl xl:text-3xl hover:opacity-60">{{ e }}</button>
         </li>
     </ul>
-
-    <!-- <div class="w-full h-20 px-[2%] sticky top-0 bg-white py-2.5 z-50 dark:bg-[#333] dark:border-b dark:border-b-[#3a3b3d] dark:text-[#d9d9d9] border-b border-t border-black"> -->
         <div class="">
-            <!-- <div class="hidden md:block">
-                <ul class="flex justify-around">
-                    <li class="relative text-[20px] mt-4" v-for="(e, index) in NavList[0]" :key="e">
-                        <button @click="$emit('MenuIndex', 'section-'+(index+1) )">{{ e }}</button>
-                    </li>
-                </ul>
-            </div> -->
             <!-- 
                 mobile 
             -->
-            <nav class="fixed w-full h-[70px] lg:h-0 z-50 top-0 bg-[#fff] dark:bg-[#1d1c21]">
+            <nav class="fixed w-full h-[70px] lg:h-0 z-50 top-0 dark:bg-[#1d1c21]">
                 <div class="manu_bar">
                     <font-awesome-icon icon="bars" class="text-3xl cursor-pointer lg:hidden absolute right-3 top-5 dark:text-[#d9d9d9]" @click="isOpen = true"  />
                 </div>
