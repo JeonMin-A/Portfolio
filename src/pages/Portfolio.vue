@@ -94,7 +94,7 @@ export default {
                     "contribution" : "100%",
                     "type" : "Publishing",
                     "Site" : "https://jeonmin-a.github.io/Calculator-percentage/",
-                    "Notion" : "https://jeonmin-a.notion.site/273672f798b644e193c86c6034dffdf0",
+                    "Notion" : "https://jeonmin-a.notion.site/d318be19ac354114b909b43701ef8d8d?pvs=4",
                     "GitHub" : "https://github.com/JeonMin-A/Calculator-percentage",
                 },
                 {
@@ -107,7 +107,7 @@ export default {
                     "contribution" : "100%",
                     "type" : "Publishing",
                     "Site" : "https://jeonmin-a.github.io/Quiz/",
-                    "Notion" : "https://jeonmin-a.notion.site/273672f798b644e193c86c6034dffdf0",
+                    "Notion" : "https://jeonmin-a.notion.site/Quiz-10248b404da946ae916a2af7f463007a?pvs=4",
                     "GitHub" : "https://github.com/JeonMin-A/Quiz_src",
                 },
                 {
@@ -120,7 +120,7 @@ export default {
                     "contribution" : "100%",
                     "type" : "CloneCode",
                     "Site" : "https://clone-code-ilsangtrip.vercel.app/",
-                    "Notion" : "https://jeonmin-a.notion.site/273672f798b644e193c86c6034dffdf0",
+                    "Notion" : "https://jeonmin-a.notion.site/4152a2c60d5d4d29be665bc275f7abe0?pvs=4",
                     "GitHub" : "https://github.com/JeonMin-A/-CloneCode-ilsangtrip",
                 },
                 {
@@ -133,7 +133,7 @@ export default {
                     "contribution" : "100%",
                     "type" : "Redisign",
                     "Site" : "https://water-work.vercel.app/",
-                    "Notion" : "https://jeonmin-a.notion.site/273672f798b644e193c86c6034dffdf0",
+                    "Notion" : "https://jeonmin-a.notion.site/0c7e5febcb9b4b8594d61ad70e9151bb?pvs=4",
                     "GitHub" : "https://github.com/JeonMin-A/water-work",
                 },
                 {
@@ -146,7 +146,7 @@ export default {
                     "contribution" : "100%",
                     "type" : "WepApp",
                     "Site" : "https://template-home-page.vercel.app/",
-                    "Notion" : "https://jeonmin-a.notion.site/273672f798b644e193c86c6034dffdf0",
+                    "Notion" : "https://jeonmin-a.notion.site/6902eb144e684916a0bce5245448520c?pvs=4",
                     "GitHub" : "https://github.com/JeonMin-A/template-HomePage",
                 },
                 {
@@ -159,7 +159,7 @@ export default {
                     "contribution" : "40%",
                     "type" : "TeamProject",
                     "Site" : "https://food-two-pi.vercel.app/",
-                    "Notion" : "https://jeonmin-a.notion.site/273672f798b644e193c86c6034dffdf0",
+                    "Notion" : "https://trusting-join-924.notion.site/dbe74906f0e34ebc8fe42b54ddc48857?pvs=4",
                     "GitHub" : "https://github.com/KwonHyeokGeon/food",
                 },
                 {
@@ -172,7 +172,7 @@ export default {
                     "contribution" : "70%",
                     "type" : "TeamProject",
                     "Site" : "https://jeonmin-a.github.io/Quiz/",
-                    "Notion" : "https://jeonmin-a.notion.site/273672f798b644e193c86c6034dffdf0",
+                    "Notion" : "https://jeonmin-a.notion.site/IKMO-c5aa35d5f0a3490da2bb057c4999c03d?pvs=4",
                     "GitHub" : "https://github.com/JeonMin-A/Quiz_src",
                 },
                 {
@@ -185,7 +185,7 @@ export default {
                     "contribution" : "60%",
                     "type" : "TeamProject",
                     "Site" : "https://jeonmin-a.github.io/Quiz/",
-                    "Notion" : "https://jeonmin-a.notion.site/273672f798b644e193c86c6034dffdf0",
+                    "Notion" : "https://jeonmin-a.notion.site/30121599f8e34cfeaa198e6ee1af51b0?pvs=4",
                     "GitHub" : "https://github.com/JeonMin-A/Quiz_src",
                 },
                 {
@@ -198,7 +198,7 @@ export default {
                     "contribution" : "60%",
                     "type" : "CloneCode",
                     "Site" : "https://clone-code-samsung-selena.vercel.app/",
-                    "Notion" : "https://jeonmin-a.notion.site/273672f798b644e193c86c6034dffdf0",
+                    "Notion" : "https://jeonmin-a.notion.site/4d647c823ad449d8b0ea6fe2fd388b3a?pvs=4",
                     "GitHub" : "https://github.com/JeonMin-A/-CloneCode-samsung_selena",
                 },
                 {
@@ -211,7 +211,7 @@ export default {
                     "contribution" : "100%",
                     "type" : "WepApp",
                     "Site" : "https://portfolio-swart-three-35.vercel.app/",
-                    "Notion" : "https://jeonmin-a.notion.site/273672f798b644e193c86c6034dffdf0",
+                    "Notion" : "https://jeonmin-a.notion.site/3dbb235d1e8246d89932b67cf5db31d8?pvs=4",
                     "GitHub" : "https://github.com/JeonMin-A/Portfolio",
                 },
             ]
