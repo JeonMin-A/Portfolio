@@ -50,14 +50,14 @@
 
 body{
     /* background-color: #f3f3f3; */
-    background: linear-gradient(-45deg, #7a7a7a, #ececec, #000000);
+    background: linear-gradient(-45deg, #979797, #c8c8c8, #ffffff);
     background-size: 400% 400%;
     animation: gradient-bg 20s ease infinite;
 }
 
 .dark body{
     /* background-color: #333; */
-    background: linear-gradient(-45deg, #333333, #292929, #ffffff);
+    background: linear-gradient(-45deg, #232323, #3f3f3f, #4d4d4d);
     background-size: 400% 400%;
     animation: gradient-bg 20s ease infinite;
 }

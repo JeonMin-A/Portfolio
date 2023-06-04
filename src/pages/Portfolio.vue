@@ -32,7 +32,10 @@
                     </h3>
                     <p class="text-sm pt-[10px] pb-[10px] md:pl-[50px]">{{ e.desc }}</p>
                     <p class="text-sm pt-[10px] pb-[10px] md:pl-[50px]">키워드 : <span v-for="el in e.keyword" :key="el" class="mr-2 align-middle">{{ el }}</span> </p>
-                    <p class="text-sm pt-[10px] pb-[10px] md:pl-[50px]">사용툴 : <span v-for="el in e.tools" :key="el" class="mr-2 align-middle">{{ el }}</span> </p>
+                    <!-- 아이콘 바인딩 -->
+                    <p class="text-sm pt-[10px] pb-[10px] md:pl-[50px]">사용툴 : 
+                        <img v-for="el in e.tools" :key="el" class="w-[25px] inline-block" :src="require(`@/assets/images/${el}.svg`)" art="hhhhh">
+                    </p>
                     <p class="text-sm pt-[10px] pb-[10px] md:pl-[50px]">작업기간 : {{ e.date }}</p>
                     <!-- <p class="text-sm pt-[10px] pb-[10px] md:pl-[50px]">기여도 : {{ e.contribution }}</p> -->
                     <ul class="flex justify-center mt-6">
@@ -76,7 +79,7 @@ export default {
                     "descTitle" : "택배 조회 서비스",
                     "desc" : "스마트 택배 조회 api를 활용한 제작한 국내/외 웹앱",
                     "keyword": ["#반응형", "#다크모드"],
-                    "tools" : ["Vue.js3", "TailwindCSS"],
+                    "tools" : ["Vue_icon", "Vuex_icon", "Tailwindcss_icon", "dotEnv_icon", "git_icon"],
                     "date" : "14일",
                     "contribution" : "100%",
                     "type" : "Publishing",
@@ -89,7 +92,7 @@ export default {
                     "descTitle" : "퍼센테이지 계산기",
                     "desc" : "계산기 웹앱",
                     "keyword": ["#반응형", "#다크모드"],
-                    "tools" : ["Vue.js3", "TailwindCSS"],
+                    "tools" : ["Vue_icon", "Vuex_icon", "Tailwindcss_icon", "dotEnv_icon", "git_icon"],
                     "date" : "7일",
                     "contribution" : "100%",
                     "type" : "Publishing",
@@ -102,7 +105,7 @@ export default {
                     "descTitle" : "Quiz",
                     "desc" : "HTML, CSS, JavaScript에 관한 퀴즈",
                     "keyword": ["#반응형"],
-                    "tools" : ["Vue.js3", "TailwindCSS"],
+                    "tools" : ["Vue_icon", "Vuex_icon", "Tailwindcss_icon", "dotEnv_icon", "git_icon"],
                     "date" : "7일",
                     "contribution" : "100%",
                     "type" : "Publishing",
@@ -115,7 +118,7 @@ export default {
                     "descTitle" : "일상과 여행",
                     "desc" : "클론코딩",
                     "keyword": ["#인스타그램API"],
-                    "tools" : ["Vue.js3", "SCSS", "Instagram Api"],
+                    "tools" : ["Vue_icon", "Vuex_icon", "Tailwindcss_icon", "dotEnv_icon", "git_icon"],
                     "date" : "12일",
                     "contribution" : "100%",
                     "type" : "CloneCode",
@@ -128,7 +131,7 @@ export default {
                     "descTitle" : "대구광역시 상수도사업본부",
                     "desc" : "사이트 리디자인",
                     "keyword": ["#반응형"],
-                    "tools" : ["Vue.js3", "TailwindCSS"],
+                    "tools" : ["Vue_icon", "Vuex_icon", "Tailwindcss_icon", "dotEnv_icon", "git_icon"],
                     "date" : "5일",
                     "contribution" : "100%",
                     "type" : "Redisign",
@@ -141,7 +144,7 @@ export default {
                     "descTitle" : "홈페이지 탬플릿",
                     "desc" : "사이트 구축",
                     "keyword": ["#반응형", "#파이어베이스", "#로그인 #게시판 구축"],
-                    "tools" : ["Vue.js3", "TailwindCSS", "FireBase"],
+                    "tools" : ["Vue_icon", "Vuex_icon", "Tailwindcss_icon", "dotEnv_icon", "git_icon"],
                     "date" : "30일",
                     "contribution" : "100%",
                     "type" : "WepApp",
@@ -154,7 +157,7 @@ export default {
                     "descTitle" : "농달 프로젝트",
                     "desc" : "농림축산 데이터를 활용해 제작한 사이트",
                     "keyword": ["#반응형", "#FireBase", "#공모전"],
-                    "tools" : ["Vue.js3", "TailwindCSS", "FireBase", "Git", "Figma"],
+                    "tools" : ["Vue_icon", "Vuex_icon", "Tailwindcss_icon", "dotEnv_icon", "git_icon"],
                     "date" : "14일",
                     "contribution" : "40%",
                     "type" : "TeamProject",
@@ -167,7 +170,7 @@ export default {
                     "descTitle" : "IKMO (진행형)",
                     "desc" : "마구마구 게임 유저들을 위한 실시간 경기 조회",
                     "keyword": ["#게임", "#백엔드"],
-                    "tools" : ["JavaScript", "CSS", "Figma"],
+                    "tools" : ["Vue_icon", "Vuex_icon", "Tailwindcss_icon", "dotEnv_icon", "git_icon"],
                     "date" : "30일",
                     "contribution" : "70%",
                     "type" : "TeamProject",
@@ -180,7 +183,7 @@ export default {
                     "descTitle" : "근처 모임 찾기 (진행형) ",
                     "desc" : "근처 모임이나 동호회를 찾아 볼 수 있는 사이트",
                     "keyword": ["#웹앱"],
-                    "tools" : ["JavaScript", "CSS", "Figma"],
+                    "tools" : ["Vue_icon", "Vuex_icon", "Tailwindcss_icon", "dotEnv_icon", "git_icon"],
                     "date" : "30일",
                     "contribution" : "60%",
                     "type" : "TeamProject",
@@ -193,7 +196,7 @@ export default {
                     "descTitle" : "삼성 영여 셀레나",
                     "desc" : "클론코딩",
                     "keyword": ["#웹앱"],
-                    "tools" : ["HTML5", "CSS3"],
+                    "tools" : ["Vue_icon", "Vuex_icon", "Tailwindcss_icon", "dotEnv_icon", "git_icon"],
                     "date" : "14일",
                     "contribution" : "60%",
                     "type" : "CloneCode",
@@ -206,7 +209,7 @@ export default {
                     "descTitle" : "Portfolio",
                     "desc" : "개인 포트폴리오 사이트",
                     "keyword": ["#웹앱"],
-                    "tools" : ["Vue.js", "TailwindCSS", "Figma", "vercel"],
+                    "tools" : ["Vue_icon", "Vuex_icon", "Tailwindcss_icon", "dotEnv_icon", "git_icon"],
                     "date" : "3일",
                     "contribution" : "100%",
                     "type" : "WepApp",
