@@ -1,7 +1,7 @@
 <template>
     <Title >Contact</Title>
     <div class="Contact w-full lg:my-[300px] relative">
-        <img :src="require(`@/assets/images/colover_icon3.svg`)" alt="" class="absolute left-0 -bottom-28 w-[130px] -z-20">
+        <img :src="require(`@/assets/images/colover_icon3.svg`)" alt="" class="absolute left-0 bottom-48 w-[130px] -z-20">
         <div class="flex justify-center my-[140px]">
             <div class="flex-col">
                 <div class="flex mb-20">
