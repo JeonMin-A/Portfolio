@@ -2,7 +2,7 @@
     <Title>about</Title>
     <div class="my-14 flex flex-wrap justify-center items-center gap-10">
         <div class="relative mb-10 inline-block">
-            <img :src="require(`@/assets/images/circleFrame.svg`)" alt="" class="animate-spin-slow rounded-[140px] w-[300px] overflow-visible mx-auto">
+            <img :src="require(`@/assets/images/circleFrame.svg`)" alt="" class="animate-spin-slow rounded-[135px] w-[300px] overflow-visible mx-auto">
             <img :src="require(`@/assets/images/profile_img.png`)" alt="" class="rounded-full w-[250px] absolute block top-[24px] left-[26px]">
         </div>
         <div class="flex justify-center">
