@@ -4,11 +4,11 @@
         <!-- 카테고리 -->
         <div class="w-full mx-auto mt-8">
             <ul class="flex flex-wrap">
-                <li class="border darkMode bg-white mr-3 mb-2 rounded-md">
-                    <button @click="CateName = '전체'" :class="CateName === '전체' && 'text-lime-600 dark:text-lime-400'" class="text-xs py-2 px-5 lg:text-lg">전체</button>
+                <li class="border border-[#5d6ab1] rounded-sm darkMode bg-white mr-3 mb-2">
+                    <button @click="CateName = '전체'" :class="CateName === '전체' && 'font-medium focus:bg-[#5d6ab1] focus:text-white'" class="text-xs py-2 px-5 lg:text-lg">전체</button>
                 </li>
-                <li class="border darkMode bg-white mr-3 mb-2 rounded-md" v-for="e in CateList" :key="e">
-                    <button @click="CateName = e.type" :class="CateName === e.type && 'text-lime-800'" class="text-xs py-2 px-2 lg:text-lg lg:py-3 lg:px-4">{{ e.type }}</button>
+                <li class="border border-[#5d6ab1] rounded-sm darkMode bg-white mr-3 mb-2" v-for="e in CateList" :key="e">
+                    <button @click="CateName = e.type" :class="CateName === e.type && 'focus:bg-[#5d6ab1] focus:text-white'" class="text-xs py-2 px-2 lg:text-lg lg:py-3 lg:px-4">{{ e.type }}</button>
                 </li>
             </ul>
         </div>
@@ -132,7 +132,7 @@ export default {
     }
 
     .swiper-pagination-progressbar-fill {
-        border: 2px solid rgb(172, 67, 67);
+        border: 2px solid #5d6ab1;
         border-radius: 5px;
     }
 
