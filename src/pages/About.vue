@@ -1,14 +1,14 @@
 <template>
     <Title>about</Title>
     <div class="my-14 flex flex-wrap justify-center items-center gap-10">
-        <div class="relative mb-10 inline-block">
+        <div class="relative mb-5 inline-block">
             <img :src="require(`@/assets/images/circleFrame.svg`)" alt="" class="animate-spin-slow rounded-[120px] w-[300px] overflow-visible mx-auto">
             <img :src="require(`@/assets/images/profile_img.png`)" alt="" class="rounded-full w-[250px] absolute block top-[24px] left-[26px]">
         </div>
         <div class="flex justify-center">
             <div class="text-center">
                 <h3 class="uppercase text-3xl font-bold mb-1">jeon min-A</h3>
-                <p class="mb-3">2001.11.13 | Daegu</p>
+                <p class="mb-3 text-sm text-gray-500">2001.11.13 | Daegu</p>
                 <p class="mb-3 font-medium">jeonminah01@gmail.com</p>
                 <p class="w-[300px] text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illum est libero magni amet exercitationem esse. Doloremque fugit corporis, voluptatum, illo magnam ratione fuga amet adipisci libero rerum nihil itaque!</p>
             </div>
