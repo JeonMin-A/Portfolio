@@ -14,6 +14,7 @@
             </div>
         </div>
     </div>
+    <img :src="require(`@/assets/images/clover_icon_bg.svg`)" alt="" class="absolute right-0 w-[150px] top-[1240px] -z-10">
 </template>
 
 <script>
