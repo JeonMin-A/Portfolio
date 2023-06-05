@@ -56,7 +56,6 @@ export default {
             isDark: useDark(),
             langList : Language,
             toggleDark: useToggle(useDark()),
-            FontStyle: "",
             MenuIndex: 'section-0',
             ArrayList: '',
             scTimer: 0,

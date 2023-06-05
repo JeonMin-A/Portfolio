@@ -1,7 +1,5 @@
 <template>
-    <div class="">
-        <h3 class="w-full text-center text-3xl dark:text-[#d9d9d9] border-t border-b border-black dark:border-gray-300 py-4 uppercase font-semibold">contact</h3>
-    </div>
+    <Title >Contact</Title>
     <div class="Contact w-full lg:my-[300px]">
         <div class="flex justify-around md:justify-center my-[140px]">
             <div class="Notion md:mr-48 hover:opacity-70 duration-200">
@@ -22,10 +20,13 @@
     </div>
 </template>
 <script>
-// import Title from '../components/Title.vue'
+import Title from '../components/Title.vue'
 
 export default {
-    name: "ContactPage"
+    name: "ContactPage",
+    components: {
+        Title
+    }
 }
 </script>
 <style>

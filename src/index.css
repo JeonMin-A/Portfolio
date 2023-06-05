@@ -50,7 +50,8 @@
 
 body{
     /* background-color: #f3f3f3; */
-    background: linear-gradient(-45deg, #979797, #c8c8c8, #ffffff);
+    background: linear-gradient(-45deg, #c9c9c9, #ffffff, #e1e1e1);
+    /* background: linear-gradient(-45deg, #ae6a6a, #38528f, #2ba387); */
     background-size: 400% 400%;
     animation: gradient-bg 20s ease infinite;
 }
