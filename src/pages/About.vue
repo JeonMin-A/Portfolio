@@ -1,9 +1,9 @@
 <template>
     <Title>about</Title>
-    <div class="my-14">
-        <div class="relative mb-10">
-            <img :src="require(`@/assets/images/circleFrame.svg`)" alt="" class="animate-spin-slow w-[350px] mx-auto">
-            <img :src="require(`@/assets/images/profile_img.png`)" alt="" class="rounded-full w-[300px] absolute top-[26px] left-[46px]">
+    <div class="my-14 flex flex-wrap justify-center items-center gap-10">
+        <div class="relative mb-10 inline-block">
+            <img :src="require(`@/assets/images/circleFrame.svg`)" alt="" class="animate-spin-slow rounded-[170px] w-[300px] overflow-visible mx-auto">
+            <img :src="require(`@/assets/images/profile_img.png`)" alt="" class="rounded-full w-[250px] absolute block top-[24px] left-[26px]">
         </div>
         <div class="flex justify-center">
             <div class="text-center">
@@ -59,39 +59,6 @@ export default {
 </script>
 
 <style>
-    @keyframes marquee{
-        from{
-    transform: translateX(0);
-    }
-    to{
-    transform: translateX(-50%);
-    }
-}
 
-    .animated-title{
-        font-size: 20px;
-        width: 100%;
-        margin-top: 60px;
-        max-width: 100%;
-        border: 1px solid black;
-        overflow: hidden;
-    }
 
-    .animated-title .track{
-        white-space: nowrap;
-        will-change: transform;
-        animation: marquee 30s linear infinite;
-    }
-
-    .animated-title .track .content{
-        padding: 30px;
-        font-weight: 600;
-    }
-    
-    .animated-title .track .content img{
-        width: 17px;
-        height: 17px;
-        margin-right: 20px;
-        margin-left: 20px;
-    }
 </style>
