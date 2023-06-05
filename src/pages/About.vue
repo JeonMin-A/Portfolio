@@ -10,7 +10,7 @@
                 <h3 class="uppercase text-3xl font-bold mb-1">jeon min-A</h3>
                 <p class="mb-3 text-sm text-gray-500">2001.11.13 | Daegu</p>
                 <p class="mb-3 font-medium">jeonminah01@gmail.com</p>
-                <p class="w-[300px] text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illum est libero magni amet exercitationem esse. Doloremque fugit corporis, voluptatum, illo magnam ratione fuga amet adipisci libero rerum nihil itaque!</p>
+                <p class="w-[300px] text-gray-500">안녕하세요! </p>
             </div>
         </div>
     </div>
