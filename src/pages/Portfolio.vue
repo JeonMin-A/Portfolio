@@ -25,25 +25,29 @@
                     <img :src="require(`@/assets/images/clip_icon2.svg`)" alt="클립" class="absolute -top-4 left-2 w-4">
                 </div>
                 <div class="basis-full md:basis-[52%] pt-10">
-                    <h3 class="text-2xl font-bold pt-[10px] pb-[10px] md:pl-[50px]">
-                        {{ e.descTitle }}
+                    <h3 class="text-2xl text-[#5d6ab1] font-bold pt-[10px] pb-[10px] md:pl-[50px]">
+                        {{ e.descTitle }} | {{ e.date }}
                     </h3>
+                    <p class="text-sm pt-[10px] pb-[10px] md:pl-[50px]"><span v-for="el in e.keyword" :key="el" class="mr-2 align-middle">{{ el }}</span> </p>
                     <p class="text-sm pt-[10px] pb-[10px] md:pl-[50px]">{{ e.desc }}</p>
-                    <p class="text-sm pt-[10px] pb-[10px] md:pl-[50px]">키워드 : <span v-for="el in e.keyword" :key="el" class="mr-2 align-middle">{{ el }}</span> </p>
                     <!-- 아이콘 바인딩 -->
                     <p class="text-sm pt-[10px] pb-[10px] md:pl-[50px]">사용툴 : 
-                        <img v-for="el in e.tools" :key="el" class="w-[25px] inline-block" :src="require(`@/assets/images/${el}.svg`)" art="hhhhh">
+                        <img v-for="el in e.tools" :key="el" class="w-[25px] inline-block mr-2" :src="require(`@/assets/images/${el}.svg`)" art="사용툴">
                     </p>
-                    <p class="text-sm pt-[10px] pb-[10px] md:pl-[50px]">작업기간 : {{ e.date }}</p>
+                    <!-- <p class="text-sm pt-[10px] pb-[10px] md:pl-[50px]">작업기간 : {{ e.date }}</p> -->
                     <!-- <p class="text-sm pt-[10px] pb-[10px] md:pl-[50px]">기여도 : {{ e.contribution }}</p> -->
                     <ul class="flex-col justify-center mt-6">
                         <!-- site -->
                         <li v-if="e.Site" class="mb-5">
-                            <a :href="e.Site" :class="e.Site === '' && 'hidden'" class="flex justify-center border rounded-md py-3" target="_blank"><img :src="require(`@/assets/images/vercel_icon.svg`)" alt="" class="w-4 inline-block mr-2">Site</a>
+                            <a :href="e.Site" :class="e.Site === '' && 'hidden'" class="flex justify-center border rounded-md py-3 hover:bg-slate-200" target="_blank">
+                                <img :src="require(`@/assets/images/vercel_icon.svg`)" alt="" class="w-4 inline-block mr-2">Site
+                            </a>
                         </li>
                         <!-- notion -->
                         <li v-if="e.Notion" class="mb-5">
-                            <a :href="e.Notion" :class="e.Notion === '' && 'hidden'" class="flex justify-center border rounded-md py-3" target="_blank"><img :src="require(`@/assets/images/notion_icon.svg`)" alt="" class="w-4 inline-block mr-2">Notion</a>
+                            <a :href="e.Notion" :class="e.Notion === '' && 'hidden'" class="flex justify-center border rounded-md py-3" target="_blank">
+                                <img :src="require(`@/assets/images/notion_icon.svg`)" alt="" class="w-4 inline-block mr-2">Notion
+                            </a>
                         </li>
                         <!-- github -->
                         <li v-if="e.GitHub" class="">

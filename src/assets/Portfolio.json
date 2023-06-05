@@ -3,7 +3,7 @@
       "img" : "pds.png",
       "descTitle" : "택배 조회 서비스",
       "desc" : "스마트 택배 조회 api를 활용한 제작한 국내/외 웹앱",
-      "keyword": ["#반응형", "#다크모드"],
+      "keyword": ["#반응형", "#다크모드", "#API"],
       "tools" : ["Vue_icon", "Vuex_icon", "Tailwindcss_icon", "dotEnv_icon", "git_icon"],
       "date" : "14일",
       "contribution" : "100%",

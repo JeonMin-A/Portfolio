@@ -14,7 +14,7 @@
                     </div>
                     <!-- mail -->
                     <div class="mail md:mr-48 hover:opacity-70 duration-200 cursor-pointer">
-                        <a href="https://jeonmin-a.notion.site/FE-9e441af27b1441908ee34ad8ab4136ed" target="_blank" class="md:animation_2">
+                        <a href="" target="_blank" class="md:animation_2">
                             <img :src="require(`@/assets/images/mail_icon.svg`)" alt="지메일" class="w-[150px] md:w-40 lg:w-[300px]">
                             <h5 class="text-center text-xl md:text-4xl mt-5 md:mt-9 dark:text-[#d9d9d9] lg:text-5xl">Gmail</h5>
                         </a>
