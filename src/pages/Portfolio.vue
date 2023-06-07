@@ -4,11 +4,11 @@
         <!-- 카테고리 -->
         <div class="w-full mt-8">
             <ul class="flex flex-wrap">
-                <li class="border border-[#5d6ab1] rounded-md darkMode mr-3 mb-2">
-                    <button @click="CateName = '전체'" :class="CateName === '전체' && 'focus:bg-[#5d6ab1] rounded-md focus:text-white'" class="text-xs py-2 px-2 lg:text-lg lg:py-3 lg:px-4">전체</button>
+                <li class="border border-[#5d6ab1] rounded darkMode mr-3 mb-2">
+                    <button @click="CateName = '전체'" :class="CateName === '전체' && 'bg-[#5d6ab1] text-white py-2 px-2'" class="text-xs py-2 px-2 lg:text-lg lg:py-3 lg:px-4">전체</button>
                 </li>
-                <li class="border border-[#5d6ab1] rounded-md darkMode mr-3 mb-2" v-for="e in CateList" :key="e">
-                    <button @click="CateName = e.type" :class="CateName === e.type && 'focus:bg-[#5d6ab1] rounded-md focus:text-white'" class="text-xs py-2 px-2 lg:text-lg lg:py-3 lg:px-4">{{ e.type }}</button>
+                <li class="border border-[#5d6ab1] rounded darkMode mr-3 mb-2" v-for="e in CateList" :key="e">
+                    <button @click="CateName = e.type" :class="CateName === e.type && 'bg-[#5d6ab1] text-white py-2 px-2'" class="text-xs py-2 px-2 lg:text-lg lg:py-3 lg:px-4">{{ e.type }}</button>
                 </li>
             </ul>
         </div>
