@@ -19,7 +19,7 @@
             <swiper :pagination="{type: 'progressbar',}" :navigation="true" :modules="modules" :keyboard="true" :cssMode="true" class="mySwiper">
                 <swiper-slide v-for="e in CateItem" :key="e">
                     <div class="bg-white mb-8 pt-12 group px-8 pb-16 rounded-md flex border darkMode flex-wrap">
-                <div class="md:basis-[48%] lg:basis-[40%] relative mx-auto items-center flex">
+                <div class="md:basis-full lg:basis-[40%] relative mx-auto items-center flex">
                     <!-- img  -->
                     <img class="w-full border" :src="require(`@/assets/images/${e.img}`)">
                     <img :src="require(`@/assets/images/clip_icon2.svg`)" alt="클립" class="absolute -top-4 left-2 w-4">
@@ -39,7 +39,7 @@
                     <ul class="flex-col justify-center mt-6">
                         <!-- site -->
                         <li v-if="e.Site" class="mb-5">
-                            <a :href="e.Site" :class="e.Site === '' && 'hidden'" class="flex justify-center border rounded-md py-3 hover:bg-slate-200" target="_blank">
+                            <a :href="e.Site" :class="e.Site === '' && 'hidden'" class="flex justify-center border rounded-md py-3" target="_blank">
                                 <img :src="require(`@/assets/images/vercel_icon.svg`)" alt="" class="w-4 inline-block mr-2">Site
                             </a>
                         </li>
