@@ -115,10 +115,6 @@ export default {
 }
 </script>
 <style>
-    .swiper-button-prev{
-        /* border: 1px solid black; */
-    }
-
     .swiper-button-prev::after{
         content: '';
         /* background-image: url("../assets/images/prev_icon.svg"); */
@@ -128,9 +124,6 @@ export default {
         position: absolute;
         top: 200px;
         left: 680px;
-    }
-    .swiper-button-next{
-        /* border: 1px solid black; */
     }
     .swiper-button-next::after{
         content: '';
