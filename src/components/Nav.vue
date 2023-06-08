@@ -2,7 +2,7 @@
     <!-- 
         logo area
     -->
-    <div class="hidden lg:block">
+    <div class="hidden lg:inline-block">
         <img :src="require(`@/assets/images/logo_text.svg`)" alt="로고" class="animate-spin-slow fixed top-0 right-0 z-20 w-[200px] block dark:hidden">
         <img :src="require(`@/assets/images/logo_text_white.svg`)" alt="로고" class="animate-spin-slow fixed top-0 right-0 z-20 w-[200px] hidden dark:block">
         <img :src="require(`@/assets/images/3.svg`)" alt="로고" class="fixed right-[50px] top-[50px] z-20 w-[100px] block dark:hidden">

@@ -46,20 +46,20 @@
                             <div class="">
                                 <ul class="justify-center mt-6 md:mt-0 xl:flex xl:mt-20">
                                     <!-- site -->
-                                    <li v-if="e.Site" class="mb-5 w-full hover:bg-[#5d6ab1]/20 xl:mr-3">
-                                        <a :href="e.Site" :class="e.Site === '' && 'hidden'" class="flex justify-center border rounded-md py-3 md:px-20 xl:px-3 xl:py-2 dark:bg-[#d9d9d9] dark:text-black" target="_blank">
+                                    <li v-if="e.Site" class="mb-5 w-full xl:mr-3">
+                                        <a :href="e.Site" :class="e.Site === '' && 'hidden'" class="flex justify-center border rounded-md py-3 md:px-20 xl:px-3 xl:py-2 dark:bg-[#d9d9d9] dark:text-black hover:opacity-80 duration-150" target="_blank">
                                         <img :src="require(`@/assets/images/vercel_icon.svg`)" alt="" class="w-4 inline-block mr-2">Site
                                     </a>
                                     </li>
                                     <!-- notion -->
-                                    <li v-if="e.Notion" class="mb-5 hover:bg-[#5d6ab1]/20 xl:mr-3">
-                                        <a :href="e.Notion" :class="e.Notion === '' && 'hidden'" class="flex justify-center border rounded-md py-3 xl:px-6 xl:py-2 dark:bg-[#d9d9d9] dark:text-black" target="_blank">
+                                    <li v-if="e.Notion" class="mb-5 xl:mr-3">
+                                        <a :href="e.Notion" :class="e.Notion === '' && 'hidden'" class="flex justify-center border rounded-md py-3 xl:px-6 xl:py-2 dark:bg-[#d9d9d9] dark:text-black hover:opacity-80 duration-150" target="_blank">
                                         <img :src="require(`@/assets/images/notion_icon.svg`)" alt="" class="w-4 inline-block mr-2">Notion
                                     </a>
                                     </li>
                                     <!-- github -->
-                                    <li v-if="e.GitHub" class="hover:bg-[#5d6ab1]/20 xl:mr-3">
-                                        <a :href="e.GitHub" :class="e.GitHub === '' && 'hidden'" class="flex justify-center border rounded-md py-3 xl:px-6 xl:py-2 dark:bg-[#d9d9d9] dark:text-black" target="_blank">
+                                    <li v-if="e.GitHub" class="xl:mr-3">
+                                        <a :href="e.GitHub" :class="e.GitHub === '' && 'hidden'" class="flex justify-center border rounded-md py-3 xl:px-6 xl:py-2 dark:bg-[#d9d9d9] dark:text-black hover:opacity-80 duration-150" target="_blank">
                                         <img :src="require(`@/assets/images/GitHub_icon.svg`)" alt="" class="w-4 inline-block mr-2">
                                         GitHub
                                     </a>

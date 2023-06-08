@@ -1,7 +1,7 @@
 <template>
     <Title >Contact</Title>
     <div class="Contact w-full lg:my-[300px] xl:my-[150px] relative">
-        <img :src="require(`@/assets/images/colover_icon3.svg`)" alt="" class="absolute left-0 bottom-48 w-[130px] -z-20 xl:w-[190px]">
+        <img :src="require(`@/assets/images/colover_icon3.svg`)" alt="" class="absolute left-0 bottom-48 w-[130px] -z-20 xl:w-[200px] xl:bottom-[50px]">
         <div class="flex justify-center my-[140px]">
             <!-- 3 -->
             <div class="flex flex-col xl:flex-row-reverse">
