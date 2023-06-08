@@ -21,7 +21,7 @@
             <!-- 
                 mobile 
             -->
-            <nav class="fixed w-full h-[70px] lg:h-0 z-50 top-0 dark:bg-[#1d1c21]">
+            <nav class="fixed w-full h-[70px] lg:h-0 z-50 top-0">
                 <div class="manu_bar">
                     <font-awesome-icon icon="bars" class="text-3xl cursor-pointer lg:hidden absolute right-3 top-5 dark:text-[#d9d9d9]" @click="isOpen = true"  />
                 </div>
@@ -30,38 +30,26 @@
                 <font-awesome-icon icon="times" class="absolute top-5 right-5 text-3xl cursor-pointer lg:hidden" @click="isOpen === false ? isOpen = true : isOpen=false" />
                 <div class="text-center mt-6">
                     <div class="logo_mobile mb-5">
-                        <img :src="require(`@/assets/images/logo_text.svg`)" alt="로고" class="animate-spin-slow block dark:hidden w-40 mx-auto relative">
-                        <img :src="require(`@/assets/images/logo_text_white.svg`)" alt="로고" class="animate-spin-slow hidden dark:block w-40 mx-auto relative">
-                        <img :src="require(`@/assets/images/3.svg`)" alt="로고" class="block dark:hidden w-20 mx-auto absolute top-[111px] right-[104px]">
-                        <img :src="require(`@/assets/images/4.svg`)" alt="로고" class="hidden dark:block w-20 mx-auto absolute top-[111px] right-[104px]">
+                        <!-- txt -->
+                        <img :src="require(`@/assets/images/logo_text.svg`)" alt="로고" class="animate-spin-slow block dark:hidden w-60 mx-auto relative">
+                        <img :src="require(`@/assets/images/logo_text_white.svg`)" alt="로고" class="animate-spin-slow hidden dark:block w-60 mx-auto relative">
+                        <!-- img -->
+                        <img :src="require(`@/assets/images/3.svg`)" alt="로고" class="block dark:hidden w-24 mx-auto absolute top-[120px] right-[96px]">
+                        <img :src="require(`@/assets/images/4.svg`)" alt="로고" class="hidden dark:block w-24 mx-auto absolute top-[120px] right-[96px]">
                         <!-- <img :src="require(`@/assets/images/img.svg`)" alt="" class="z-50 rounded-full"> -->
+                        <p>FE 개발자 전민아</p>
                     </div>
-                    <p>FE 개발자 전민아</p>
                 </div>
                 <ul class="mt-12">
-                    <li class="py-5 border-b" v-for="(e, index) in NavList[0]" :key="e">
+                    <li class="py-5 border-b hover:text-[#5d6ab1] focus:text-[#5d6ab1]" v-for="(e, index) in NavList[0]" :key="e">
                         <font-awesome-icon :icon="NavList[2][index]" class="mr-2" />
                         <button @click="$emit('MenuIndex', 'section-'+(index+1) )">{{ e }}</button>
                     </li>
                 </ul>
-                <ul class="bottom-3 right-64 flex justify-center mt-10">
-                    <!-- Notion -->
-                    <li class="notion mr-10">
-                        <a href="https://jeonmin-a.notion.site/FE-9e441af27b1441908ee34ad8ab4136ed">
-                            <img :src="require(`@/assets/images/Notion_app_logo.png`)" alt="노션" class="w-12">
-                        </a>
-                    </li>
-                    <!-- GitHub -->
-                    <li class="github">
-                        <a href="https://github.com/JeonMin-A">
-                            <img :src="require(`@/assets/images/GitHub_logo.png`)" alt="깃허브" class="w-12">
-                        </a>
-                    </li>
-                </ul>
-                <div class="absolute right-3 bottom-3 cursor-pointer border px-3 py-2 rounded">
+                <div class="absolute right-7 bottom-12 cursor-pointer border px-3 py-2 rounded">
                     <font-awesome-icon :icon="isDark ? 'sun' : 'moon'" class="text-xl text-[#333] dark:text-[#d9d9d9]" @click="$emit('dark')"/>
                 </div>
-                <p class="absolute bottom-0 right-[70px] mb-4 text-xs">jeonminah01@gmail.com</p>
+                <p class="absolute bottom-10 right-[90px] mb-4 text-xs">jeonminah01@gmail.com</p>
             </div>
         </div>
 </template>

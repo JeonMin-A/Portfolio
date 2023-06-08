@@ -1,6 +1,6 @@
 <template>
     <Title>about</Title>
-    <div class="my-14 flex flex-wrap justify-center items-center gap-10 py-28">
+    <div class="my-14 flex flex-wrap justify-center items-center gap-10 py-[200px]">
         <div class="relative mb-5 inline-block">
             <img :src="require(`@/assets/images/circleFrame.svg`)" alt="" class="animate-spin-slow rounded-[120px] w-[300px] overflow-visible mx-auto">
             <img :src="require(`@/assets/images/profile_img.png`)" alt="" class="rounded-full w-[250px] absolute block top-[24px] left-[26px]">
@@ -14,7 +14,7 @@
             </div>
         </div>
     </div>
-    <img :src="require(`@/assets/images/clover_icon_bg.svg`)" alt="" class="absolute right-0 w-[150px] top-[1240px] -z-10 md:top-[1020px]">
+    <img :src="require(`@/assets/images/clover_icon_bg.svg`)" alt="" class="absolute right-0 w-[150px] top-[1240px] -z-10 md:top-[1300px] xl:w-[220px]">
 </template>
 
 <script>
