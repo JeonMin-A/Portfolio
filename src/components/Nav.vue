@@ -11,10 +11,9 @@
     <!-- 
         nav
     -->
-    <ul class="hidden lg:inline-block md:sticky md:top-4 md:z-20">
+    <ul class="hidden lg:inline-block md:sticky md:top-[40%] md:z-20">
         <li class="ml-6 text-[20px] dark:text-[#d9d9d9]  mt-4" v-for="(e, index) in NavList[0]" :key="e">
             <button @click="$emit('MenuIndex', 'section-'+(index+1) )" class="lg:text-xl xl:text-3xl hover:opacity-60">{{ e }}</button>
-            
         </li>
     </ul>
         <div class="">
@@ -70,9 +69,5 @@ export default {
 </script>
 
 <style>
-    .swiper-pagination .swiper-pagination-progressbar .swiper-pagination-horizontal.swiper-pagination-progressbar-fill:root{
-        /* --swiper-theme-color: #007aff; */
-        --swiper-theme-color: #000000;
-        /* background: #000; */
-    }
+
 </style>
