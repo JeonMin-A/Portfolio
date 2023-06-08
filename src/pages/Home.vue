@@ -4,11 +4,12 @@
         <div class="flex text-6xl font-bold justify-center mr-32 md:text-8xl md:ml-[50px] xl:text-[150px] dark:text-[#d9d9d9] xl:mr-[500px]">
             <h2 class="mr-1">j</h2>
             <h2 class="mr-1">e</h2>
-            <img :src="require(`@/assets/images/longCircle_icon1.svg`)" alt="" class="w-[170px] md:w-[250px] mt-2 mr-1 hidden md:block xl:w-[360px]">
-            <img :src="require(`@/assets/images/longCircle_icon1_white.svg`)" alt="" class="w-[170px] md:w-[250px] mt-2 mr-1 hidden md:block xl:w-[360px]">
             <!-- <<< sm -->
             <img :src="require(`@/assets/images/longCircle_icon2.svg`)" alt="" class="w-20 mt-2 mr-1 md:hidden block dark:hidden">
-            <img :src="require(`@/assets/images/longCircle_icon2_white.svg`)" alt="" class="w-20 mt-2 mr-1 md:hidden hidden dark:block">
+            <img :src="require(`@/assets/images/longCircle_icon2_white.svg`)" alt="" class="w-20 mt-2 mr-1 md:hidden">
+            <!-- md >>> -->
+            <img :src="require(`@/assets/images/longCircle_icon1.svg`)" alt="" class="w-[170px] md:w-[250px] mt-2 mr-1 hidden md:block xl:w-[360px] dark:hidden">
+            <img :src="require(`@/assets/images/longCircle_icon1_white.svg`)" alt="" class="w-[170px] md:w-[250px] mt-2 mr-1 hidden md:block xl:w-[360px]">
             <h2>n</h2>
         </div>
         <!-- midden floor -->
@@ -30,16 +31,18 @@
             <h2 class="mr-1">f</h2>
             <!-- sm -->
             <img :src="require(`@/assets/images/shortCircle_icon.svg`)" alt="" class="w-8 mt-2 mr-1 md:w-[53px] md:mt-3 xl:hidden block dark:hidden">
-            <img :src="require(`@/assets/images/shortCircle_icon_white.svg`)" alt="" class="w-8 mt-2 mr-1 md:w-[53px] md:mt-3 xl:hidden hidden dark:block">
+            <img :src="require(`@/assets/images/shortCircle_icon_white.svg`)" alt="" class="w-8 mt-2 mr-1 md:w-[53px] md:mt-3 xl:hidden hidden dark:block dark:md:hidden">
             <!-- xl -->
-            <img :src="require(`@/assets/images/shortCircle_icon2.svg`)" alt="" class="xl:w-[85px] xl:mt-5 xl:mx-2 hidden xl:block ">
+            <img :src="require(`@/assets/images/shortCircle_icon2.svg`)" alt="" class="xl:w-[85px] xl:mt-5 xl:mx-2 hidden xl:block dark:hidden">
+            <img :src="require(`@/assets/images/shortCircle_icon2_white.svg`)" alt="" class="xl:w-[85px] xl:mt-5 xl:mx-2 hidden xl:block ">
             <h2 class="mr-1">l</h2>
             <h2 class="mr-1">i</h2>
             <!-- sm -->
             <img :src="require(`@/assets/images/shortCircle_icon.svg`)" alt="" class="w-8 mt-2 md:w-[53px] md:mt-3 xl:hidden block dark:hidden">
-            <img :src="require(`@/assets/images/shortCircle_icon_white.svg`)" alt="" class="w-8 mt-2 md:w-[53px] md:mt-3 xl:hidden hidden dark:block">
+            <img :src="require(`@/assets/images/shortCircle_icon_white.svg`)" alt="" class="w-8 mt-2 md:w-[53px] md:mt-3 xl:hidden hidden dark:block dark:md:hidden">
             <!-- xl -->
-            <img :src="require(`@/assets/images/shortCircle_icon2.svg`)" alt="" class="xl:w-[85px] xl:mt-5 xl:mx-2 hidden xl:block">
+            <img :src="require(`@/assets/images/shortCircle_icon2.svg`)" alt="" class="xl:w-[85px] xl:mt-5 xl:mx-2 hidden xl:block dark:hidden">
+            <img :src="require(`@/assets/images/shortCircle_icon2_white.svg`)" alt="" class="xl:w-[85px] xl:mt-5 xl:mx-2 hidden xl:block">
         </div>
     </div>
 </template>
