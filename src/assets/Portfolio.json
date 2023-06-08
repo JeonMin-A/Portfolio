@@ -21,9 +21,9 @@
       "date" : "7일",
       "contribution" : "100%",
       "type" : "Publishing",
-      "Site" : "https://jeonmin-a.github.io/Calculator-percentage/",
+      "Site" : "https://percentage-calculator-seven.vercel.app/",
       "Notion" : "https://jeonmin-a.notion.site/d318be19ac354114b909b43701ef8d8d?pvs=4",
-      "GitHub" : "https://github.com/JeonMin-A/Calculator-percentage"
+      "GitHub" : "https://github.com/JeonMin-A/percentage-calculator"
   },
   {
       "img" : "Quiz.png",
@@ -34,9 +34,9 @@
       "date" : "7일",
       "contribution" : "100%",
       "type" : "Publishing",
-      "Site" : "https://jeonmin-a.github.io/Quiz/",
+      "Site" : "https://quiz-jeonmin-a.vercel.app/",
       "Notion" : "https://jeonmin-a.notion.site/Quiz-10248b404da946ae916a2af7f463007a?pvs=4",
-      "GitHub" : "https://github.com/JeonMin-A/Quiz_src"
+      "GitHub" : "https://github.com/JeonMin-A/Quiz"
   },
   {
       "img" : "ilsangtrip.png",
@@ -86,9 +86,9 @@
       "date" : "14일",
       "contribution" : "40%",
       "type" : "TeamProject",
-      "Site" : "https://food-two-pi.vercel.app/",
+      "Site" : "https://nongdal.vercel.app/",
       "Notion" : "https://trusting-join-924.notion.site/dbe74906f0e34ebc8fe42b54ddc48857?pvs=4",
-      "GitHub" : "https://github.com/KwonHyeokGeon/food"
+      "GitHub" : "https://github.com/JeonMin-A/food"
   },
   {
       "img" : "IKMO.png",
@@ -138,7 +138,7 @@
       "date" : "3일",
       "contribution" : "100%",
       "type" : "WepApp",
-      "Site" : "https://portfolio-swart-three-35.vercel.app/",
+      "Site" : "https://portfolio-jeonmin-a.vercel.app/",
       "Notion" : "https://jeonmin-a.notion.site/3dbb235d1e8246d89932b67cf5db31d8?pvs=4",
       "GitHub" : "https://github.com/JeonMin-A/Portfolio"
   }
