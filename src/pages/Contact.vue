@@ -4,7 +4,7 @@
         <img :src="require(`@/assets/images/colover_icon3.svg`)" alt="" class="absolute left-0 bottom-48 w-[130px] -z-20 xl:w-[190px]">
         <div class="flex justify-center my-[140px]">
             <!-- 3 -->
-            <div class="flex sm:flex-col xl:flex-row-reverse">
+            <div class="flex flex-col xl:flex-row-reverse">
                 <!-- 2 -->
                 <div class="flex justify-center mb-20 xl:ml-9">
                     <!-- Notion / 1 -->
