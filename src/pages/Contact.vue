@@ -3,9 +3,11 @@
     <div class="Contact w-full lg:my-[300px] relative">
         <img :src="require(`@/assets/images/colover_icon3.svg`)" alt="" class="absolute left-0 bottom-48 w-[130px] -z-20">
         <div class="flex justify-center my-[140px]">
-            <div class="flex-col">
+            <!-- 3 -->
+            <div class="flex-col xl:flex-none">
+                <!-- 2 -->
                 <div class="flex justify-center mb-20">
-                    <!-- Notion -->
+                    <!-- Notion / 1 -->
                     <div class="Notion hover:opacity-70 duration-200 cursor-pointer mr-10 md:mr-32">
                         <a href="https://jeonmin-a.notion.site/FE-9e441af27b1441908ee34ad8ab4136ed" target="_blank" class="md:animation_1">
                             <img :src="require(`@/assets/images/Notion_app_logo.png`)" alt="노션" class="w-[150px] md:w-40 lg:w-[300px]">
